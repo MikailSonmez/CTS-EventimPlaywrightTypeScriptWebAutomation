@@ -2,7 +2,7 @@ import { Page } from '@playwright/test';
 import { Selectors } from '../core/selectors';
 
 export class CheckoutPage {
-  constructor(private page: Page) {}
+  constructor(private page: Page) { }
 
   async selectSeat(seatId: string): Promise<void> {
     await this.page.click(`[data-seat-id="${seatId}"]`);
