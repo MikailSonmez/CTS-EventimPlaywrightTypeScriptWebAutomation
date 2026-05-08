@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "user-001",
+      "email": "john.doe@test.eventim.de",
+      "password": "TestPass123!",
+      "firstName": "John",
+      "lastName": "Doe",
+      "role": "standard"
+    },
+    {
+      "id": "user-002",
+      "email": "premium.user@test.eventim.de",
+      "password": "PremiumPass456!",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "role": "premium"
+    },
+    {
+      "id": "user-003",
+      "email": "admin@test.eventim.de",
+      "password": "AdminPass789!",
+      "firstName": "Admin",
+      "lastName": "User",
+      "role": "admin"
+    }
+  ]
+}

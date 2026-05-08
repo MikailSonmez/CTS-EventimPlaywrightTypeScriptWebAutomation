@@ -1,0 +1,19 @@
+{
+  "name": "cts-eventim-playwright-framework",
+  "version": "1.0.0",
+  "description": "CTS EVENTIM Playwright TypeScript TDD Automation Framework",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --project=chromium tests/smoke/",
+    "test:regression": "playwright test tests/regression/",
+    "test:e2e": "playwright test tests/e2e/",
+    "test:api": "playwright test tests/api/",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.43.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}
