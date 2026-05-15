@@ -1,0 +1,2 @@
+[2026-05-15T13:38:10.498Z] [INFO] Starting test: Search returns relevant results
+[METRIC] Search returns relevant results took 280ms

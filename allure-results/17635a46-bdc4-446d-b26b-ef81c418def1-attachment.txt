@@ -1,0 +1,2 @@
+[2026-05-15T13:37:06.036Z] [INFO] Starting test: Buy ticket button is visible on event page
+[METRIC] Buy ticket button is visible on event page took 19192ms

@@ -1,0 +1,2 @@
+[2026-05-15T13:33:52.720Z] [INFO] Starting test: Checkout requires authentication
+[METRIC] Checkout requires authentication took 603ms

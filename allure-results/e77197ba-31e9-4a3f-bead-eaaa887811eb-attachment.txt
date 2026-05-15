@@ -1,0 +1,1 @@
+[2026-05-15T13:37:26.650Z] [ERROR] Test FAILED: Buy ticket button is visible on event page

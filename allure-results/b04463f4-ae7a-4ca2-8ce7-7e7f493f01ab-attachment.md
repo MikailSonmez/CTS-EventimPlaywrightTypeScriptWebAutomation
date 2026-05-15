@@ -1,0 +1,2467 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e\cart.spec.ts >> Cart and Shopping Bag Tests >> User can remove item from cart
+- Location: tests\e2e\cart.spec.ts:46:7
+
+# Error details
+
+```
+TimeoutError: page.fill: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('[data-testid="search-input"]')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - dialog "Wir passen dein Erlebnis individuell an" [ref=e2]:
+    - document [ref=e3]:
+      - generic [ref=e5]:
+        - heading "Wir passen dein Erlebnis individuell an" [level=1] [ref=e6]
+        - generic [ref=e7]:
+          - text: Wir nutzen Cookies und ähnliche Technologien, mit denen eine Speicherung und Zugriff auf Informationen in deinem Endgerät erfolgt, um einen sicheren Betrieb unserer Webseiten zu gewährleisten, komfortable Einstellungen zu speichern, Statistiken zu erstellen sowie dir passende Inhalte und Werbung von uns und unseren Werbepartnern (z. B. Veranstaltern) anzuzeigen. Einige Informationen zum Nutzerverhalten teilen wir mit unseren Werbepartnern. Zusammen mit der Eventim Media House GmbH verantworten wir die Anzeige personalisierter Werbung und Inhalte auf unseren digitalen Angeboten und denen Dritter über die dir oder deinem Haushalt zugeordneten Geräte. Zu Personalisierungszecken erstellen wir Zielgruppen, die mit deiner Zustimmung ein pseudonymes Profil bilden, in das deine Nutzung unserer Webseite und weiteren Diensten (Newsletter, App) einfließt. Wir arbeiten mit 30 Anbietern zusammen, um Sicherheit zu gewährleisten und personalisierte Werbung und Inhalte bereitzustellen.
+          - text: Indem du „Einverstanden“ klickst, willigst du in die Verwendung von Cookies zu allen o. g. Zwecken sowie der damit einhergehenden Datenverarbeitung ein und gestattest, dass diese Verarbeitungen auch außerhalb der EU erfolgen, z. B. in den USA.
+          - text: Durch Klicken auf „Erforderliches“ kannst du optionale Cookies ablehnen. Unter „Einstellungen“ gelangst du zu einem Menü für eine differenzierte Auswahl, die durch Klicken auf „Einstellungen speichern“ gespeichert wird, z. B. in Bezug auf die Kategorien Erforderliches, Komfort- und Statistik, Marketing, Externe Medieninhalte, Werbung und Inhalte unter Verwendung des IAB TCF. Außerdem kannst du spezifische Auswahlen in Bezug auf die Einstellung von Profilen zur Personalisierung von Werbung und Inhalten treffen. Die Auswahl personalisierter Inhalte, Werbung und Inhaltsmessungen, Zielgruppenforschung und Verbesserung unserer Dienste findet im Rahmen unserer Nutzung des IAB Transparency and Consent Framework (TCF) statt. Informationen zu den berechtigten Interessen, für die wir Daten im Rahmen des IAB TCF verarbeiten, findest du ebenfalls unter „Einstellungen“.
+          - text: Weitere Informationen, auch zu deinem Recht, die Einwilligung jederzeit zu widerrufen, erhältst du in der
+          - link "Datenschutzinformation" [ref=e8] [cursor=pointer]:
+            - /url: "#"
+          - text: ", Informationen zum Webseitenbetreiber findest du im"
+          - link "Impressum" [ref=e9] [cursor=pointer]:
+            - /url: "#"
+          - text: .
+      - form [ref=e10]:
+        - button "Einverstanden" [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]: Einverstanden
+        - button "Einstellungen" [ref=e15] [cursor=pointer]
+        - button "Erforderliches" [ref=e17] [cursor=pointer]:
+          - generic [ref=e18]: Erforderliches
+    - 'button "Sprache: de" [ref=e19] [cursor=pointer]':
+      - img [ref=e20]
+  - generic [ref=e21]:
+    - banner [ref=e22]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - link "Eintrittskarten Konzertkarten Tickets" [ref=e27] [cursor=pointer]:
+            - /url: /
+            - img "Eintrittskarten Konzertkarten Tickets" [ref=e28]
+          - navigation [ref=e29]:
+            - list [ref=e30]:
+              - listitem [ref=e31]:
+                - button "Alle Events" [ref=e32] [cursor=pointer]:
+                  - generic [ref=e33]: Alle Events
+                  - generic [ref=e34]: 
+                - text:                          
+              - listitem [ref=e35]:
+                - button "Alle Orte" [ref=e36] [cursor=pointer]:
+                  - generic [ref=e37]: Alle Orte
+                  - generic [ref=e38]: 
+        - generic [ref=e44]:
+          - generic [ref=e45]: Suche nach Künstlern und Events
+          - combobox "Suche nach Künstlern und Events" [ref=e46]
+          - text: 
+          - generic [ref=e48] [cursor=pointer]: 
+          - text: 
+        - generic [ref=e49]:
+          - button "Sprachauswahl" [ref=e50] [cursor=pointer]:
+            - generic [ref=e51]: 
+          - link "Meine Favoriten" [ref=e52] [cursor=pointer]:
+            - /url: /myfavorites/artists/
+            - generic [ref=e53]: 
+          - link "Konto" [ref=e54] [cursor=pointer]:
+            - /url: /dashboard/
+            - generic [ref=e55]: 
+    - main [ref=e56]:
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - link "Olli Schulz" [ref=e62] [cursor=pointer]:
+            - /url: /artist/olli-schulz/
+            - img "Olli Schulz" [ref=e64]
+          - link "BINI" [ref=e66] [cursor=pointer]:
+            - /url: /artist/bini/
+            - img "BINI" [ref=e68]
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - group [ref=e71]:
+              - generic [ref=e72]:
+                - link [ref=e74] [cursor=pointer]:
+                  - /url: /artist/alte-bekannte/alte-bekannte-das-beste-von-frueher-bis-heute-4154026/
+                  - img [ref=e76]
+                - link [ref=e78] [cursor=pointer]:
+                  - /url: /artist/thomas-bergersen/
+                  - img [ref=e80]
+            - group [ref=e81]:
+              - generic [ref=e82]:
+                - link [ref=e84] [cursor=pointer]:
+                  - /url: /artist/torsten-straeter/torsten-straeter-die-zyklopen-von-saint-tropez-4003810/
+                  - img [ref=e86]
+                - link [ref=e88] [cursor=pointer]:
+                  - /url: /artist/paris-paloma/paris-paloma-the-fatal-flaw-tour-4150923/
+                  - img [ref=e90]
+            - group [ref=e91]:
+              - link [ref=e93] [cursor=pointer]:
+                - /url: /artist/ab-in-den-sueden-das-musical/
+                - img [ref=e95]
+              - link [ref=e97] [cursor=pointer]:
+                - /url: /artist/die-prinzen/die-prinzen-tschuessi-machts-gut-die-abschiedstournee-4137725/
+                - img [ref=e99]
+            - group [ref=e100]:
+              - link [ref=e102] [cursor=pointer]:
+                - /url: /artist/chuck-ragan/chuck-ragan-4156214/
+                - img [ref=e104]
+              - link [ref=e106] [cursor=pointer]:
+                - /url: /artist/christoph-sakwerda/christoph-sakwerda-keine-zeit-zu-verlieren-tour-2026-3964422/
+                - img [ref=e108]
+            - group [ref=e109]:
+              - link [ref=e111] [cursor=pointer]:
+                - /url: /artist/tori-kelly/
+                - img [ref=e113]
+              - link [ref=e115] [cursor=pointer]:
+                - /url: /artist/mr-yasin/mr-yasin-hypnose-was-wenn-es-doch-funktioniert-3934497/
+                - img [ref=e117]
+            - group [ref=e118]:
+              - link [ref=e120] [cursor=pointer]:
+                - /url: /artist/leila/
+                - img [ref=e122]
+              - link [ref=e124] [cursor=pointer]:
+                - /url: /artist/drei-haselnuesse-fuer-aschenbroedel-das-musical/
+                - img [ref=e126]
+              - link [ref=e128] [cursor=pointer]:
+                - /url: https://www.eventim.de/campaign/festivals/?affiliate=EVE
+                - img [ref=e130]
+            - group [ref=e131]:
+              - link [ref=e133] [cursor=pointer]:
+                - /url: /artist/herbert-groenemeyer/
+                - img [ref=e135]
+              - link [ref=e137] [cursor=pointer]:
+                - /url: /artist/timon-krause/timon-krause-2026-die-lesetour-99-mind-hacks-4153569/
+                - img [ref=e139]
+            - group [ref=e140]:
+              - link [ref=e142] [cursor=pointer]:
+                - /url: /artist/helene-fischer/
+                - img [ref=e144]
+              - link [ref=e146] [cursor=pointer]:
+                - /url: /artist/giovanni-zarrella/giovanni-zarrella-die-tournee-zum-neuen-album-live-2027-4101847/
+                - img [ref=e148]
+            - group "1 / 8" [ref=e149]:
+              - generic [ref=e150]:
+                - link "Alte Bekannte" [ref=e152] [cursor=pointer]:
+                  - /url: /artist/alte-bekannte/alte-bekannte-das-beste-von-frueher-bis-heute-4154026/
+                  - img "Alte Bekannte" [ref=e154]
+                - link "Thomas Bergersen" [ref=e156] [cursor=pointer]:
+                  - /url: /artist/thomas-bergersen/
+                  - img "Thomas Bergersen" [ref=e158]
+            - group "2 / 8" [ref=e159]:
+              - generic [ref=e160]:
+                - link "Torsten Sträter" [ref=e162] [cursor=pointer]:
+                  - /url: /artist/torsten-straeter/torsten-straeter-die-zyklopen-von-saint-tropez-4003810/
+                  - img "Torsten Sträter" [ref=e164]
+                - link "Paris Paloma" [ref=e166] [cursor=pointer]:
+                  - /url: /artist/paris-paloma/paris-paloma-the-fatal-flaw-tour-4150923/
+                  - img "Paris Paloma" [ref=e168]
+            - group "3 / 8" [ref=e169]:
+              - link "Ab in den Süden - Das Musical" [ref=e171] [cursor=pointer]:
+                - /url: /artist/ab-in-den-sueden-das-musical/
+                - img "Ab in den Süden - Das Musical" [ref=e173]
+              - link "Die Prinzen" [ref=e175] [cursor=pointer]:
+                - /url: /artist/die-prinzen/die-prinzen-tschuessi-machts-gut-die-abschiedstournee-4137725/
+                - img "Die Prinzen" [ref=e177]
+            - group "4 / 8" [ref=e178]:
+              - link "Chuck Ragan" [ref=e180] [cursor=pointer]:
+                - /url: /artist/chuck-ragan/chuck-ragan-4156214/
+                - img "Chuck Ragan" [ref=e182]
+              - link "Christoph Sakwerda" [ref=e184] [cursor=pointer]:
+                - /url: /artist/christoph-sakwerda/christoph-sakwerda-keine-zeit-zu-verlieren-tour-2026-3964422/
+                - img "Christoph Sakwerda" [ref=e186]
+            - group "5 / 8" [ref=e187]:
+              - link "Tori Kelly" [ref=e189] [cursor=pointer]:
+                - /url: /artist/tori-kelly/
+                - img "Tori Kelly" [ref=e191]
+              - link "Mr. Yasin" [ref=e193] [cursor=pointer]:
+                - /url: /artist/mr-yasin/mr-yasin-hypnose-was-wenn-es-doch-funktioniert-3934497/
+                - img "Mr. Yasin" [ref=e195]
+            - group "6 / 8" [ref=e196]:
+              - link "LEILA" [ref=e198] [cursor=pointer]:
+                - /url: /artist/leila/
+                - img "LEILA" [ref=e200]
+              - link "Drei Haselnüsse für Aschenbrödel – Das Musical" [ref=e202] [cursor=pointer]:
+                - /url: /artist/drei-haselnuesse-fuer-aschenbroedel-das-musical/
+                - img "Drei Haselnüsse für Aschenbrödel – Das Musical" [ref=e204]
+              - link "Live dabei! Festivals und Open Airs 2026" [ref=e206] [cursor=pointer]:
+                - /url: https://www.eventim.de/campaign/festivals/?affiliate=EVE
+                - img "Live dabei! Festivals und Open Airs 2026" [ref=e208]
+            - group "7 / 8" [ref=e209]:
+              - link "Herbert Grönemeyer" [ref=e211] [cursor=pointer]:
+                - /url: /artist/herbert-groenemeyer/
+                - img "Herbert Grönemeyer" [ref=e213]
+              - link "Timon Krause" [ref=e215] [cursor=pointer]:
+                - /url: /artist/timon-krause/timon-krause-2026-die-lesetour-99-mind-hacks-4153569/
+                - img "Timon Krause" [ref=e217]
+            - group "8 / 8" [ref=e218]:
+              - link "Helene Fischer" [ref=e220] [cursor=pointer]:
+                - /url: /artist/helene-fischer/
+                - img "Helene Fischer" [ref=e222]
+              - link "Giovanni Zarrella" [ref=e224] [cursor=pointer]:
+                - /url: /artist/giovanni-zarrella/giovanni-zarrella-die-tournee-zum-neuen-album-live-2027-4101847/
+                - img "Giovanni Zarrella" [ref=e226]
+            - group [ref=e227]:
+              - generic [ref=e228]:
+                - link [ref=e230] [cursor=pointer]:
+                  - /url: /artist/alte-bekannte/alte-bekannte-das-beste-von-frueher-bis-heute-4154026/
+                  - img [ref=e232]
+                - link [ref=e234] [cursor=pointer]:
+                  - /url: /artist/thomas-bergersen/
+                  - img [ref=e236]
+            - group [ref=e237]:
+              - generic [ref=e238]:
+                - link [ref=e240] [cursor=pointer]:
+                  - /url: /artist/torsten-straeter/torsten-straeter-die-zyklopen-von-saint-tropez-4003810/
+                  - img [ref=e242]
+                - link [ref=e244] [cursor=pointer]:
+                  - /url: /artist/paris-paloma/paris-paloma-the-fatal-flaw-tour-4150923/
+                  - img [ref=e246]
+            - group [ref=e247]:
+              - link [ref=e249] [cursor=pointer]:
+                - /url: /artist/ab-in-den-sueden-das-musical/
+                - img [ref=e251]
+              - link [ref=e253] [cursor=pointer]:
+                - /url: /artist/die-prinzen/die-prinzen-tschuessi-machts-gut-die-abschiedstournee-4137725/
+                - img [ref=e255]
+            - group [ref=e256]:
+              - link [ref=e258] [cursor=pointer]:
+                - /url: /artist/chuck-ragan/chuck-ragan-4156214/
+                - img [ref=e260]
+              - link [ref=e262] [cursor=pointer]:
+                - /url: /artist/christoph-sakwerda/christoph-sakwerda-keine-zeit-zu-verlieren-tour-2026-3964422/
+                - img [ref=e264]
+            - group [ref=e265]:
+              - link [ref=e267] [cursor=pointer]:
+                - /url: /artist/tori-kelly/
+                - img [ref=e269]
+              - link [ref=e271] [cursor=pointer]:
+                - /url: /artist/mr-yasin/mr-yasin-hypnose-was-wenn-es-doch-funktioniert-3934497/
+                - img [ref=e273]
+            - group [ref=e274]:
+              - link [ref=e276] [cursor=pointer]:
+                - /url: /artist/leila/
+                - img [ref=e278]
+              - link [ref=e280] [cursor=pointer]:
+                - /url: /artist/drei-haselnuesse-fuer-aschenbroedel-das-musical/
+                - img [ref=e282]
+              - link [ref=e284] [cursor=pointer]:
+                - /url: https://www.eventim.de/campaign/festivals/?affiliate=EVE
+                - img [ref=e286]
+            - group [ref=e287]:
+              - link [ref=e289] [cursor=pointer]:
+                - /url: /artist/herbert-groenemeyer/
+                - img [ref=e291]
+              - link [ref=e293] [cursor=pointer]:
+                - /url: /artist/timon-krause/timon-krause-2026-die-lesetour-99-mind-hacks-4153569/
+                - img [ref=e295]
+            - group [ref=e296]:
+              - link [ref=e298] [cursor=pointer]:
+                - /url: /artist/helene-fischer/
+                - img [ref=e300]
+              - link [ref=e302] [cursor=pointer]:
+                - /url: /artist/giovanni-zarrella/giovanni-zarrella-die-tournee-zum-neuen-album-live-2027-4101847/
+                - img [ref=e304]
+          - button "Vorheriges Karussell-Element" [ref=e305] [cursor=pointer]:
+            - generic [ref=e306]: 
+          - button "Nächstes Karussell-Element" [ref=e307] [cursor=pointer]:
+            - generic [ref=e308]: 
+      - navigation [ref=e311]:
+        - generic [ref=e312]:
+          - list [ref=e313]:
+            - listitem "1 / 14" [ref=e314] [cursor=pointer]:
+              - link "EVENTIM-Gutschein" [ref=e315]:
+                - /url: https://www.eventim.de/campaign/gutschein/?affiliate=EVE
+            - listitem "2 / 14" [ref=e316] [cursor=pointer]:
+              - link "Angebote" [ref=e317]:
+                - /url: https://www.eventim.de/campaign/angebote/?affiliate=EVE
+            - listitem "3 / 14" [ref=e318] [cursor=pointer]:
+              - link "Konzerte" [ref=e319]:
+                - /url: /events/konzerte-1/
+            - listitem "4 / 14" [ref=e320] [cursor=pointer]:
+              - link "Musicals" [ref=e321]:
+                - /url: https://www.eventim.de/campaign/aktuelle-musicals/?affiliate=EVE
+            - listitem "5 / 14" [ref=e322] [cursor=pointer]:
+              - link "Ausstellungen" [ref=e323]:
+                - /url: /events/freizeit-7/ausstellungen-1530/
+            - listitem "6 / 14" [ref=e324] [cursor=pointer]:
+              - link "Festivals" [ref=e325]:
+                - /url: https://www.eventim.de/campaign/festivals/?affiliate=EVE
+            - listitem "7 / 14" [ref=e326] [cursor=pointer]:
+              - link "Humor" [ref=e327]:
+                - /url: /events/humor-5/
+            - listitem "8 / 14" [ref=e328] [cursor=pointer]:
+              - link "Sport" [ref=e329]:
+                - /url: /events/sport-3/
+            - listitem "9 / 14" [ref=e330] [cursor=pointer]:
+              - link "Show" [ref=e331]:
+                - /url: /events/musical-show-4/show-21/
+            - listitem "10 / 14" [ref=e332] [cursor=pointer]:
+              - link "Kultur" [ref=e333]:
+                - /url: /events/kultur-2/
+            - listitem "11 / 14" [ref=e334] [cursor=pointer]:
+              - link "VIP & Extras" [ref=e335]:
+                - /url: /campaign/vip-special-tickets/
+            - listitem "12 / 14" [ref=e336] [cursor=pointer]:
+              - link "EVENTIM-News" [ref=e337]:
+                - /url: /campaign/eventim-news/
+            - listitem "13 / 14" [ref=e338] [cursor=pointer]:
+              - link "EVENTIM Headliner" [ref=e339]:
+                - /url: https://www.eventim.de/magazin/
+            - listitem "14 / 14" [ref=e340] [cursor=pointer]:
+              - link "EVENTIM.Travel" [ref=e341]:
+                - /url: https://www.eventim-travel.de/?utm_source=eventim&utm_medium=dp&utm_campaign=homepage&utm_content=subnavi
+          - text: 
+          - button "Nächstes Karussell-Element" [ref=e342] [cursor=pointer]:
+            - generic [ref=e343]: 
+      - generic [ref=e345]:
+        - heading "Highlights" [level=2] [ref=e346]
+        - generic [ref=e348]:
+          - button "Vorheriges Karussell-Element" [disabled]:
+            - generic: 
+          - generic [ref=e350]:
+            - group "1 / 17" [ref=e351]:
+              - link "LaFee LaFee Tickets ab € 56,45" [ref=e352] [cursor=pointer]:
+                - /url: /artist/lafee/
+                - img "LaFee" [ref=e353]
+                - generic [ref=e354]: LaFee
+                - generic [ref=e355]: Tickets ab € 56,45
+            - group "2 / 17" [ref=e356]:
+              - link "Sarah Engels Sarah Engels Tickets ab € 49,90" [ref=e357] [cursor=pointer]:
+                - /url: /artist/sarah-engels/
+                - img "Sarah Engels" [ref=e358]
+                - generic [ref=e359]: Sarah Engels
+                - generic [ref=e360]: Tickets ab € 49,90
+            - group "3 / 17" [ref=e361]:
+              - link "Geschenkgutschein Geschenkgutschein Für jeden Anlass Jetzt bestellen!" [ref=e362] [cursor=pointer]:
+                - /url: https://www.eventim.de/campaign/gutschein/?affiliate=EVE
+                - img "Geschenkgutschein" [ref=e363]
+                - generic [ref=e364]: Geschenkgutschein
+                - generic [ref=e366]: Für jeden Anlass
+                - generic [ref=e367]: Jetzt bestellen!
+            - group "4 / 17" [ref=e368]:
+              - link "The Weeknd The Weeknd Tickets von Fan zu Fan fanSALE" [ref=e369] [cursor=pointer]:
+                - /url: https://www.fansale.de/tickets/all/the-weeknd/470648/?utm_source=eventim&utm_medium=dp&utm_campaign=home&utm_content=teaser&utm_term=theweeknd
+                - img "The Weeknd" [ref=e370]
+                - generic [ref=e371]: The Weeknd
+                - generic [ref=e373]: Tickets von Fan zu Fan
+                - generic [ref=e374]: fanSALE
+            - group "5 / 17" [ref=e375]:
+              - link "Da Capo Varieté Da Capo Varieté Tickets ab € 19,35" [ref=e376] [cursor=pointer]:
+                - /url: /artist/da-capo-dinner-variete/da-capo-variete-world-christmas-show-4139635/
+                - img "Da Capo Varieté" [ref=e377]
+                - generic [ref=e378]: Da Capo Varieté
+                - generic [ref=e379]: Tickets ab € 19,35
+            - group "6 / 17" [ref=e380]:
+              - link "Ehrlich Brothers Ehrlich Brothers Tickets ab € 52,50" [ref=e381] [cursor=pointer]:
+                - /url: /artist/ehrlich-brothers/ehrlich-brothers-live-2255099/
+                - img "Ehrlich Brothers" [ref=e382]
+                - generic [ref=e383]: Ehrlich Brothers
+                - generic [ref=e384]: Tickets ab € 52,50
+            - group "7 / 17" [ref=e385]:
+              - link "Six60 Six60 Tickets ab € 44,35" [ref=e386] [cursor=pointer]:
+                - /url: /artist/six-60/
+                - img "Six60" [ref=e387]
+                - generic [ref=e388]: Six60
+                - generic [ref=e389]: Tickets ab € 44,35
+            - group "8 / 17" [ref=e390]:
+              - link "Tayc Tayc Tickets ab € 69,90" [ref=e391] [cursor=pointer]:
+                - /url: /artist/tayc/
+                - img "Tayc" [ref=e392]
+                - generic [ref=e393]: Tayc
+                - generic [ref=e394]: Tickets ab € 69,90
+            - group "9 / 17" [ref=e395]:
+              - link "Northcote Northcote Tickets ab € 29,90" [ref=e396] [cursor=pointer]:
+                - /url: /artist/northcote/
+                - img "Northcote" [ref=e397]
+                - generic [ref=e398]: Northcote
+                - generic [ref=e399]: Tickets ab € 29,90
+            - group "10 / 17" [ref=e400]:
+              - link "Anna von Hausswolff Anna von Hausswolff Tickets ab € 35,20" [ref=e401] [cursor=pointer]:
+                - /url: /artist/anna-von-hausswolff/anna-von-hausswolff-4154565/
+                - img "Anna von Hausswolff" [ref=e402]
+                - generic [ref=e403]: Anna von Hausswolff
+                - generic [ref=e404]: Tickets ab € 35,20
+            - group "11 / 17" [ref=e405]:
+              - link "Özcan Cosar Özcan Cosar Tickets ab € 42,10" [ref=e406] [cursor=pointer]:
+                - /url: /artist/oezcan-cosar/oezcan-cosar-vip-3752728/
+                - img "Özcan Cosar" [ref=e407]
+                - generic [ref=e408]: Özcan Cosar
+                - generic [ref=e409]: Tickets ab € 42,10
+            - group "12 / 17" [ref=e410]:
+              - link "Clueso Clueso Tickets ab € 60,40" [ref=e411] [cursor=pointer]:
+                - /url: /artist/clueso/
+                - img "Clueso" [ref=e412]
+                - generic [ref=e413]: Clueso
+                - generic [ref=e414]: Tickets ab € 60,40
+            - group "13 / 17" [ref=e415]:
+              - link "Osan Yaran Osan Yaran Tickets ab € 38,75" [ref=e416] [cursor=pointer]:
+                - /url: /artist/osan-yaran/osan-yaran-aus-prinzip-3536015/
+                - img "Osan Yaran" [ref=e417]
+                - generic [ref=e418]: Osan Yaran
+                - generic [ref=e419]: Tickets ab € 38,75
+            - group "14 / 17" [ref=e420]:
+              - link "Nina Chuba Nina Chuba Tickets ab € 51,50" [ref=e421] [cursor=pointer]:
+                - /url: /artist/nina-chuba/nina-chuba-sommershows-2026-3948920/
+                - img "Nina Chuba" [ref=e422]
+                - generic [ref=e423]: Nina Chuba
+                - generic [ref=e424]: Tickets ab € 51,50
+            - group "15 / 17" [ref=e425]:
+              - link "Wincent Weiss Wincent Weiss Tickets ab € 65,60" [ref=e426] [cursor=pointer]:
+                - /url: /artist/wincent-weiss/
+                - img "Wincent Weiss" [ref=e427]
+                - generic [ref=e428]: Wincent Weiss
+                - generic [ref=e429]: Tickets ab € 65,60
+            - group "16 / 17" [ref=e430]:
+              - link "Nick Cave & The Bad Seeds Nick Cave & The Bad Seeds Tickets ab € 81,25" [ref=e431] [cursor=pointer]:
+                - /url: /artist/nick-cave-and-the-bad-seeds/nick-cave-the-bad-seeds-tour-2026-3133274/
+                - img "Nick Cave & The Bad Seeds" [ref=e432]
+                - generic [ref=e433]: Nick Cave & The Bad Seeds
+                - generic [ref=e434]: Tickets ab € 81,25
+            - group "17 / 17" [ref=e435]:
+              - link "Montez Montez Tickets ab € 62,95" [ref=e436] [cursor=pointer]:
+                - /url: /artist/montez/
+                - img "Montez" [ref=e437]
+                - generic [ref=e438]: Montez
+                - generic [ref=e439]: Tickets ab € 62,95
+          - button "Nächstes Karussell-Element" [ref=e440] [cursor=pointer]:
+            - generic [ref=e441]: 
+      - generic [ref=e443]:
+        - heading " Ticketalarm" [level=2] [ref=e444]:
+          - generic [ref=e445]: 
+          - text: Ticketalarm
+        - generic [ref=e447]:
+          - button "Vorheriges Karussell-Element" [disabled]:
+            - generic: 
+          - generic [ref=e449]:
+            - group "1 / 27" [ref=e450]:
+              - link "KATSEYE KATSEYE Tickets ab Donnerstag, 21.05., 15 Uhr! Ticketalarm" [ref=e451] [cursor=pointer]:
+                - /url: /artist/katseye/#editorialComponent
+                - img "KATSEYE" [ref=e452]
+                - generic [ref=e453]: KATSEYE
+                - generic [ref=e455]: Tickets ab Donnerstag, 21.05., 15 Uhr!
+                - generic [ref=e456]: Ticketalarm
+            - group "2 / 27" [ref=e457]:
+              - link "RIN RIN Tickets ab Mittwoch, 20.05., 12 Uhr! Ticketalarm" [ref=e458] [cursor=pointer]:
+                - /url: /artist/rin/
+                - img "RIN" [ref=e459]
+                - generic [ref=e460]: RIN
+                - generic [ref=e462]: Tickets ab Mittwoch, 20.05., 12 Uhr!
+                - generic [ref=e463]: Ticketalarm
+            - group "3 / 27" [ref=e464]:
+              - link "Daniel Caesar Daniel Caesar Tickets ab Mittwoch, 20.05., 10 Uhr! Ticketalarm" [ref=e465] [cursor=pointer]:
+                - /url: /artist/daniel-caesar/#editorialComponent
+                - img "Daniel Caesar" [ref=e466]
+                - generic [ref=e467]: Daniel Caesar
+                - generic [ref=e469]: Tickets ab Mittwoch, 20.05., 10 Uhr!
+                - generic [ref=e470]: Ticketalarm
+            - group "4 / 27" [ref=e471]:
+              - link "Tove Lo Tove Lo Tickets ab Mittwoch, 20.05., 10 Uhr! Ticketalarm" [ref=e472] [cursor=pointer]:
+                - /url: /artist/tove-lo/
+                - img "Tove Lo" [ref=e473]
+                - generic [ref=e474]: Tove Lo
+                - generic [ref=e476]: Tickets ab Mittwoch, 20.05., 10 Uhr!
+                - generic [ref=e477]: Ticketalarm
+            - group "5 / 27" [ref=e478]:
+              - link "Kanye West Kanye West Live in Deutschland? Ticketalarm" [ref=e479] [cursor=pointer]:
+                - /url: /magazin/rock-pop/ye-aka-kanye-west-neues-album-bully-fuer-ende-maerz-angekuendigt-konzerte-in-den-niederlanden-kommt-er-auch-nach-deutschland/
+                - img "Kanye West" [ref=e480]
+                - generic [ref=e481]: Kanye West
+                - generic [ref=e483]: Live in Deutschland?
+                - generic [ref=e484]: Ticketalarm
+            - group "6 / 27" [ref=e485]:
+              - link "Madonna Madonna Mit neuem Album live? Ticketalarm" [ref=e486] [cursor=pointer]:
+                - /url: /magazin/rock-pop/ueberraschungsauftritt-in-la-madonna-gibt-einblicke-in-ihr-neues-album/
+                - img "Madonna" [ref=e487]
+                - generic [ref=e488]: Madonna
+                - generic [ref=e490]: Mit neuem Album live?
+                - generic [ref=e491]: Ticketalarm
+            - group "7 / 27" [ref=e492]:
+              - link "Justin Bieber Justin Bieber Mit neuer Musik auch wieder auf Tour? Ticketalarm" [ref=e493] [cursor=pointer]:
+                - /url: /magazin/rock-pop/was-fuer-ein-swag-justin-bieber-meldet-sich-ueberraschend-mit-neuem-album-zurueck/
+                - img "Justin Bieber" [ref=e494]
+                - generic [ref=e495]: Justin Bieber
+                - generic [ref=e497]: Mit neuer Musik auch wieder auf Tour?
+                - generic [ref=e498]: Ticketalarm
+            - group "8 / 27" [ref=e499]:
+              - link "The Rolling Stones The Rolling Stones Nach der Albumankündigung bald neue Shows? Ticketalarm" [ref=e500] [cursor=pointer]:
+                - /url: /magazin/rock-pop/the-rolling-stones-veroeffentlichen-neue-single-und-kuendigen-album-foreign-tongues-fuer-den-10-juli-2026-an/
+                - img "The Rolling Stones" [ref=e501]
+                - generic [ref=e502]: The Rolling Stones
+                - generic [ref=e504]: Nach der Albumankündigung bald neue Shows?
+                - generic [ref=e505]: Ticketalarm
+            - group "9 / 27" [ref=e506]:
+              - link "Coldplay Coldplay Neue Deutschlandshows in Planung? Ticketalarm" [ref=e507] [cursor=pointer]:
+                - /url: /magazin/rock-pop/gemeinsame-single-coldplay-stromae-und-pomme-auf-dem-neuen-arcane-soundtrack-extended-version-von-ma-mailleure-ennemie-veroeffentlicht/
+                - img "Coldplay" [ref=e508]
+                - generic [ref=e509]: Coldplay
+                - generic [ref=e511]: Neue Deutschlandshows in Planung?
+                - generic [ref=e512]: Ticketalarm
+            - group "10 / 27" [ref=e513]:
+              - link "Miley Cyrus Miley Cyrus Mit neuer Musik auf Tour? Ticketalarm" [ref=e514] [cursor=pointer]:
+                - /url: /magazin/rock-pop/zum-20-jaehrigen-jubilaeum-von-hannah-montana-miley-cyrus-veroeffentlicht-neue-single-younger-you/
+                - img "Miley Cyrus" [ref=e515]
+                - generic [ref=e516]: Miley Cyrus
+                - generic [ref=e518]: Mit neuer Musik auf Tour?
+                - generic [ref=e519]: Ticketalarm
+            - group "11 / 27" [ref=e520]:
+              - link "Paul McCartney Paul McCartney Neues Album bald auch live? Ticketalarm" [ref=e521] [cursor=pointer]:
+                - /url: /magazin/rock-pop/paul-mccartney-kuendigt-neues-album-an-the-boys-of-dungeon-lane-erscheint-am-29-mai/
+                - img "Paul McCartney" [ref=e522]
+                - generic [ref=e523]: Paul McCartney
+                - generic [ref=e525]: Neues Album bald auch live?
+                - generic [ref=e526]: Ticketalarm
+            - group "12 / 27" [ref=e527]:
+              - link "Harry Styles Harry Styles Kommen doch noch Deutschland-Shows? Ticketalarm" [ref=e528] [cursor=pointer]:
+                - /url: /artist/harry-styles/
+                - img "Harry Styles" [ref=e529]
+                - generic [ref=e530]: Harry Styles
+                - generic [ref=e532]: Kommen doch noch Deutschland-Shows?
+                - generic [ref=e533]: Ticketalarm
+            - group "13 / 27" [ref=e534]:
+              - link "Jay-Z Jay-Z Live in Deutschland? Ticketalarm" [ref=e535] [cursor=pointer]:
+                - /url: /magazin/rock-pop/rueckkehr-ins-rampenlicht-jay-z-spielt-zwei-stadion-shows-in-new-york-kommt-er-auch-wieder-nach-deutschland/
+                - img "Jay-Z" [ref=e536]
+                - generic [ref=e537]: Jay-Z
+                - generic [ref=e539]: Live in Deutschland?
+                - generic [ref=e540]: Ticketalarm
+            - group "14 / 27" [ref=e541]:
+              - link "Imagine Dragons Imagine Dragons Weitere Shows in Deutschland? Ticketalarm" [ref=e542] [cursor=pointer]:
+                - /url: /artist/imagine-dragons/
+                - img "Imagine Dragons" [ref=e543]
+                - generic [ref=e544]: Imagine Dragons
+                - generic [ref=e546]: Weitere Shows in Deutschland?
+                - generic [ref=e547]: Ticketalarm
+            - group "15 / 27" [ref=e548]:
+              - link "Eminem Eminem Mit neuer Musik bald auf Tour? Ticketalarm" [ref=e549] [cursor=pointer]:
+                - /url: /magazin/bilderstrecke/eminem-veroeffentlicht-neues-album-the-death-of-slim-shady-coup-de-grace-so-hat-er-sich-seit-der-the-slim-shady-lp-veraendert/
+                - img "Eminem" [ref=e550]
+                - generic [ref=e551]: Eminem
+                - generic [ref=e553]: Mit neuer Musik bald auf Tour?
+                - generic [ref=e554]: Ticketalarm
+            - group "16 / 27" [ref=e555]:
+              - link "P!NK P!NK Wann ist sie zurück in Deutschland? Ticketalarm" [ref=e556] [cursor=pointer]:
+                - /url: /magazin/rock-pop/bilderstrecke/pinks-spektakulaere-deutschlandtour-in-bildern-fotostrecken-aus-moenchengladbach-und-leipzig/
+                - img "P!NK" [ref=e557]
+                - generic [ref=e558]: P!NK
+                - generic [ref=e560]: Wann ist sie zurück in Deutschland?
+                - generic [ref=e561]: Ticketalarm
+            - group "17 / 27" [ref=e562]:
+              - link "U2 U2 Musikalische Neuheiten und Live-Versprechen! Ticketalarm" [ref=e563] [cursor=pointer]:
+                - /url: /magazin/rock-pop/u2-ueberraschen-mit-neuer-ep-easter-lily-und-geben-ein-live-versprechen/
+                - img "U2" [ref=e564]
+                - generic [ref=e565]: U2
+                - generic [ref=e567]: Musikalische Neuheiten und Live-Versprechen!
+                - generic [ref=e568]: Ticketalarm
+            - group "18 / 27" [ref=e569]:
+              - link "Taylor Swift Taylor Swift Neue Musik ist da! Folgt die Tour? Ticketalarm" [ref=e570] [cursor=pointer]:
+                - /url: /magazin/rock-pop/taylor-swift-ueberrascht-mit-musikvideo-zu-elizabeth-taylor-aus-ihrem-aktuellen-album-the-life-of-a-showgirl/
+                - img "Taylor Swift" [ref=e571]
+                - generic [ref=e572]: Taylor Swift
+                - generic [ref=e574]: Neue Musik ist da! Folgt die Tour?
+                - generic [ref=e575]: Ticketalarm
+            - group "19 / 27" [ref=e576]:
+              - link "Oasis Oasis Vielleicht auch in Deutschland? Ticketalarm" [ref=e577] [cursor=pointer]:
+                - /url: /magazin/rock-pop/arm-in-arm-auf-die-buehne-triumphaler-tourauftakt-von-oasis-in-cardiff/
+                - img "Oasis" [ref=e578]
+                - generic [ref=e579]: Oasis
+                - generic [ref=e581]: Vielleicht auch in Deutschland?
+                - generic [ref=e582]: Ticketalarm
+            - group "20 / 27" [ref=e583]:
+              - link "BLACKPINK BLACKPINK Zurück auf Tour? Ticketalarm" [ref=e584] [cursor=pointer]:
+                - /url: /magazin/rock-pop/blackpink-starten-ihre-welttour-und-praesentieren-die-kommende-single-jump-erstmals-live/
+                - img "BLACKPINK" [ref=e585]
+                - generic [ref=e586]: BLACKPINK
+                - generic [ref=e588]: Zurück auf Tour?
+                - generic [ref=e589]: Ticketalarm
+            - group "21 / 27" [ref=e590]:
+              - link "Sade Sade Bald endlich wieder live? Ticketalarm" [ref=e591] [cursor=pointer]:
+                - /url: /artist/sade/
+                - img "Sade" [ref=e592]
+                - generic [ref=e593]: Sade
+                - generic [ref=e595]: Bald endlich wieder live?
+                - generic [ref=e596]: Ticketalarm
+            - group "22 / 27" [ref=e597]:
+              - link "Beyoncé Beyoncé Nach der US-Tour auch in Deutschland? Ticketalarm" [ref=e598] [cursor=pointer]:
+                - /url: /magazin/rock-pop/kurz-vor-der-grammy-verleihung-beyonce-kuendigt-cowboy-carter-tour-an/
+                - img "Beyoncé" [ref=e599]
+                - generic [ref=e600]: Beyoncé
+                - generic [ref=e602]: Nach der US-Tour auch in Deutschland?
+                - generic [ref=e603]: Ticketalarm
+            - group "23 / 27" [ref=e604]:
+              - link "Adele Adele Neuigkeiten? Ticketalarm" [ref=e605] [cursor=pointer]:
+                - /url: /artist/adele/
+                - img "Adele" [ref=e606]
+                - generic [ref=e607]: Adele
+                - generic [ref=e609]: Neuigkeiten?
+                - generic [ref=e610]: Ticketalarm
+            - group "24 / 27" [ref=e611]:
+              - link "Udo Lindenberg Udo Lindenberg Die Musik-Ikone live? Ticketalarm" [ref=e612] [cursor=pointer]:
+                - /url: /magazin/rock-pop/ueberraschung-udo-lindenberg-veroeffentlicht-single-komet-mit-apache-207/
+                - img "Udo Lindenberg" [ref=e613]
+                - generic [ref=e614]: Udo Lindenberg
+                - generic [ref=e616]: Die Musik-Ikone live?
+                - generic [ref=e617]: Ticketalarm
+            - group "25 / 27" [ref=e618]:
+              - link "Rihanna Rihanna Tour-News in Aussicht? Ticketalarm" [ref=e619] [cursor=pointer]:
+                - /url: /magazin/rock-pop/nach-zwei-jahren-musikalischer-funkstille-rihanna-veroeffentlicht-neue-single-friend-of-mine/
+                - img "Rihanna" [ref=e620]
+                - generic [ref=e621]: Rihanna
+                - generic [ref=e623]: Tour-News in Aussicht?
+                - generic [ref=e624]: Ticketalarm
+            - group "26 / 27" [ref=e625]:
+              - link "Ariana Grande Ariana Grande Bald wieder live? Ticketalarm" [ref=e626] [cursor=pointer]:
+                - /url: /magazin/rock-pop/eternal-sunshine-deluxe-brighter-days-ahead-ariana-grande-veroeffentlicht-album-mit-kurzfilm/
+                - img "Ariana Grande" [ref=e627]
+                - generic [ref=e628]: Ariana Grande
+                - generic [ref=e630]: Bald wieder live?
+                - generic [ref=e631]: Ticketalarm
+            - group "27 / 27" [ref=e632]:
+              - link "Shakira Shakira Mit Live-Shows zurück in Deutschland? Ticketalarm" [ref=e633] [cursor=pointer]:
+                - /url: /magazin/rock-pop/shakira-feiert-musikalische-meilensteine-neue-version-von-hips-dont-lie-mit-ed-sheeran-und-beele/
+                - img "Shakira" [ref=e634]
+                - generic [ref=e635]: Shakira
+                - generic [ref=e637]: Mit Live-Shows zurück in Deutschland?
+                - generic [ref=e638]: Ticketalarm
+          - button "Nächstes Karussell-Element" [ref=e639] [cursor=pointer]:
+            - generic [ref=e640]: 
+      - generic [ref=e642]:
+        - heading "Das ist los in deiner Stadt!" [level=2] [ref=e643]
+        - generic [ref=e645]:
+          - button "Vorheriges Karussell-Element" [disabled]:
+            - generic: 
+          - generic [ref=e647]:
+            - group "1 / 12" [ref=e648]:
+              - link "Das ist los in Das ist los in Berlin" [ref=e649] [cursor=pointer]:
+                - /url: /city/berlin-1/
+                - img "Das ist los in" [ref=e650]
+                - generic [ref=e651]: Das ist los in
+                - generic [ref=e652]: Berlin
+            - group "2 / 12" [ref=e653]:
+              - link "Das ist los in Das ist los in Hamburg" [ref=e654] [cursor=pointer]:
+                - /url: /city/hamburg-7/
+                - img "Das ist los in" [ref=e655]
+                - generic [ref=e656]: Das ist los in
+                - generic [ref=e657]: Hamburg
+            - group "3 / 12" [ref=e658]:
+              - link "Das ist los in Das ist los in München" [ref=e659] [cursor=pointer]:
+                - /url: /city/muenchen-11/
+                - img "Das ist los in" [ref=e660]
+                - generic [ref=e661]: Das ist los in
+                - generic [ref=e662]: München
+            - group "4 / 12" [ref=e663]:
+              - link "Das ist los in Das ist los in Köln" [ref=e664] [cursor=pointer]:
+                - /url: /city/koeln-9/
+                - img "Das ist los in" [ref=e665]
+                - generic [ref=e666]: Das ist los in
+                - generic [ref=e667]: Köln
+            - group "5 / 12" [ref=e668]:
+              - link "Das ist los in Das ist los in Frankfurt" [ref=e669] [cursor=pointer]:
+                - /url: /city/frankfurt-6/
+                - img "Das ist los in" [ref=e670]
+                - generic [ref=e671]: Das ist los in
+                - generic [ref=e672]: Frankfurt
+            - group "6 / 12" [ref=e673]:
+              - link "Das ist los in Das ist los in Stuttgart" [ref=e674] [cursor=pointer]:
+                - /url: /city/stuttgart-12/
+                - img "Das ist los in" [ref=e675]
+                - generic [ref=e676]: Das ist los in
+                - generic [ref=e677]: Stuttgart
+            - group "7 / 12" [ref=e678]:
+              - link "Das ist los in Das ist los in Düsseldorf" [ref=e679] [cursor=pointer]:
+                - /url: /city/duesseldorf-4/
+                - img "Das ist los in" [ref=e680]
+                - generic [ref=e681]: Das ist los in
+                - generic [ref=e682]: Düsseldorf
+            - group "8 / 12" [ref=e683]:
+              - link "Das ist los in Das ist los in Leipzig" [ref=e684] [cursor=pointer]:
+                - /url: /city/leipzig-10/
+                - img "Das ist los in" [ref=e685]
+                - generic [ref=e686]: Das ist los in
+                - generic [ref=e687]: Leipzig
+            - group "9 / 12" [ref=e688]:
+              - link "Das ist los in Das ist los in Bremen" [ref=e689] [cursor=pointer]:
+                - /url: /city/bremen-2/
+                - img "Das ist los in" [ref=e690]
+                - generic [ref=e691]: Das ist los in
+                - generic [ref=e692]: Bremen
+            - group "10 / 12" [ref=e693]:
+              - link "Das ist los in Das ist los in Dresden" [ref=e694] [cursor=pointer]:
+                - /url: /city/dresden-3/
+                - img "Das ist los in" [ref=e695]
+                - generic [ref=e696]: Das ist los in
+                - generic [ref=e697]: Dresden
+            - group "11 / 12" [ref=e698]:
+              - link "Das ist los in Das ist los in Hannover" [ref=e699] [cursor=pointer]:
+                - /url: /city/hannover-8/
+                - img "Das ist los in" [ref=e700]
+                - generic [ref=e701]: Das ist los in
+                - generic [ref=e702]: Hannover
+            - group "12 / 12" [ref=e703]:
+              - link "Das ist los in Das ist los in Nürnberg" [ref=e704] [cursor=pointer]:
+                - /url: /city/nuernberg-76/
+                - img "Das ist los in" [ref=e705]
+                - generic [ref=e706]: Das ist los in
+                - generic [ref=e707]: Nürnberg
+          - button "Nächstes Karussell-Element" [ref=e708] [cursor=pointer]:
+            - generic [ref=e709]: 
+      - generic [ref=e713]:
+        - generic [ref=e714]: Immer und über alle Kanäle informiert.
+        - generic [ref=e715]: Immer wissen, was wann und wo los ist.
+        - generic [ref=e718]:
+          - textbox "Deine E-Mail-Adresse" [ref=e719]
+          - button "Zustimmen" [ref=e720] [cursor=pointer]
+        - generic [ref=e722] [cursor=pointer]:
+          - generic [ref=e724]:
+            - text: Ich möchte von EVENTIM via E-Mail-Newsletter, Social Media sowie Webseiten und Apps Dritter über Veranstaltungen, Merchandise, veranstaltungsnahe Angebote (z. B. Anreise) und zu Partner-Angeboten informiert werden sowie auf mich zugeschnittene Empfehlungen erhalten.
+            - text: Hierzu darf CTS EVENTIM AG & Co. KGaA meine E-Mail-Adresse und insofern vorhanden weitere Informationen aus meinem Kundenaccount (z. B. Favoriten, Adresse, vergangene Ticketkäufe) sowie Daten aus mit meinem Einverständnis gesetzten Cookies (z. B. Nutzerverhalten auf eventim.de) analysieren und ggf. mit Dritten teilen. Du kannst diese Zustimmung jederzeit widerrufen, andere von dir erteilte Einwilligungen bleiben hiervon unberührt. Die Datenschutzinformation findest du
+          - link "hier." [ref=e725]:
+            - /url: /help/data-protection?affiliate=EVE
+            - generic [ref=e726]: hier.
+      - generic [ref=e728]:
+        - heading "Empfehlungen für dich" [level=2] [ref=e729]
+        - generic [ref=e731]:
+          - button "Vorheriges Karussell-Element" [disabled]:
+            - generic: 
+          - generic [ref=e733]:
+            - group "1 / 16" [ref=e734]:
+              - 'link "Jurassic World: The Experience Jurassic World: The Experience Tickets ab € 23,92" [ref=e735] [cursor=pointer]':
+                - /url: /artist/jurassic-world-the-experience/jurassic-world-the-experience-zeitfenstertickets-4047817/
+                - 'img "Jurassic World: The Experience" [ref=e736]'
+                - generic [ref=e737]: "Jurassic World: The Experience"
+                - generic [ref=e738]: Tickets ab € 23,92
+            - group "2 / 16" [ref=e739]:
+              - link "UDOVERSUM - Die große Udo Lindenberg Ausstellung UDOVERSUM - Die große Udo Lindenberg Ausstellung Tickets ab € 18,00" [ref=e740] [cursor=pointer]:
+                - /url: /artist/udoversum-die-grosse-udo-lindenberg-ausstellung/udoversum-die-grosse-udo-lindenberg-ausstellung-zeitfensterticket-4111586/
+                - img "UDOVERSUM - Die große Udo Lindenberg Ausstellung" [ref=e741]
+                - generic [ref=e742]: UDOVERSUM - Die große Udo Lindenberg Ausstellung
+                - generic [ref=e743]: Tickets ab € 18,00
+            - group "3 / 16" [ref=e744]:
+              - link "Dieter Hallervorden Dieter Hallervorden Tickets ab € 44,35" [ref=e745] [cursor=pointer]:
+                - /url: /artist/dieter-hallervorden/unkaputtbar-90-jahre-hallervorden-4015825/
+                - img "Dieter Hallervorden" [ref=e746]
+                - generic [ref=e747]: Dieter Hallervorden
+                - generic [ref=e748]: Tickets ab € 44,35
+            - group "4 / 16" [ref=e749]:
+              - link "SERIENKILLER – Die True Crime Ausstellung SERIENKILLER – Die True Crime Ausstellung Tickets ab € 22,00" [ref=e750] [cursor=pointer]:
+                - /url: /artist/serienkiller-die-true-crime-ausstellung/serienkiller-die-true-crime-ausstellung-koeln-zeitfenstertickets-4112798/
+                - img "SERIENKILLER – Die True Crime Ausstellung" [ref=e751]
+                - generic [ref=e752]: SERIENKILLER – Die True Crime Ausstellung
+                - generic [ref=e753]: Tickets ab € 22,00
+            - group "5 / 16" [ref=e754]:
+              - link "Dresden Dolls Dresden Dolls Tickets ab € 44,95" [ref=e755] [cursor=pointer]:
+                - /url: /artist/dresden-dolls/the-dresden-dolls-yes-virginia-tailors-version-20th-anniversary-tour-4152599/
+                - img "Dresden Dolls" [ref=e756]
+                - generic [ref=e757]: Dresden Dolls
+                - generic [ref=e758]: Tickets ab € 44,95
+            - group "6 / 16" [ref=e759]:
+              - link "Amorphis Amorphis Tickets ab € 55,50" [ref=e760] [cursor=pointer]:
+                - /url: /artist/amorphis/amorphis-borderland-tour-2027-4152635/
+                - img "Amorphis" [ref=e761]
+                - generic [ref=e762]: Amorphis
+                - generic [ref=e763]: Tickets ab € 55,50
+            - group "7 / 16" [ref=e764]:
+              - 'link "TUTANCHAMUN: Ein Immersives Abenteuer TUTANCHAMUN: Ein Immersives Abenteuer Angebote ab € 18,00" [ref=e765] [cursor=pointer]':
+                - /url: /artist/tutanchamun-ein-immersives-abenteuer/tutanchamun-hannover-zeitfenstertickets-4092642/
+                - 'img "TUTANCHAMUN: Ein Immersives Abenteuer" [ref=e766]'
+                - generic [ref=e767]: "TUTANCHAMUN: Ein Immersives Abenteuer"
+                - generic [ref=e768]: Angebote ab € 18,00
+            - group "8 / 16" [ref=e769]:
+              - link "Özcan Deniz Özcan Deniz Tickets ab € 63,50" [ref=e770] [cursor=pointer]:
+                - /url: /artist/oezcan-deniz/
+                - img "Özcan Deniz" [ref=e771]
+                - generic [ref=e772]: Özcan Deniz
+                - generic [ref=e773]: Tickets ab € 63,50
+            - group "9 / 16" [ref=e774]:
+              - link "Adam Lambert Adam Lambert Tickets ab € 58,90" [ref=e775] [cursor=pointer]:
+                - /url: /artist/adam-lambert/
+                - img "Adam Lambert" [ref=e776]
+                - generic [ref=e777]: Adam Lambert
+                - generic [ref=e778]: Tickets ab € 58,90
+            - group "10 / 16" [ref=e779]:
+              - link "Lisa Eckhart Lisa Eckhart Tickets ab € 23,51" [ref=e780] [cursor=pointer]:
+                - /url: /artist/lisa-eckhart/
+                - img "Lisa Eckhart" [ref=e781]
+                - generic [ref=e782]: Lisa Eckhart
+                - generic [ref=e783]: Tickets ab € 23,51
+            - group "11 / 16" [ref=e784]:
+              - link "NightWash Live NightWash Live Tickets ab € 20,05" [ref=e785] [cursor=pointer]:
+                - /url: /artist/nightwash-live/nightwash-live-3733702/
+                - img "NightWash Live" [ref=e786]
+                - generic [ref=e787]: NightWash Live
+                - generic [ref=e788]: Tickets ab € 20,05
+            - group "12 / 16" [ref=e789]:
+              - link "Editors Editors Tickets ab € 53,75" [ref=e790] [cursor=pointer]:
+                - /url: /artist/editors/
+                - img "Editors" [ref=e791]
+                - generic [ref=e792]: Editors
+                - generic [ref=e793]: Tickets ab € 53,75
+            - group "13 / 16" [ref=e794]:
+              - link "Disneys DIE EISKÖNIGIN - Das Musical Disneys DIE EISKÖNIGIN - Das Musical Tickets ab € 38,49 Kinder-Special" [ref=e795] [cursor=pointer]:
+                - /url: /artist/disneys-die-eiskoenigin-das-musical/
+                - img "Disneys DIE EISKÖNIGIN - Das Musical" [ref=e796]
+                - generic [ref=e797]: Disneys DIE EISKÖNIGIN - Das Musical
+                - generic [ref=e798]: Tickets ab € 38,49
+                - generic [ref=e800]: Kinder-Special
+            - group "14 / 16" [ref=e801]:
+              - link "Rhein Fire Rhein Fire Angebote ab € 16,40" [ref=e802] [cursor=pointer]:
+                - /url: /artist/rhein-fire/
+                - img "Rhein Fire" [ref=e803]
+                - generic [ref=e804]: Rhein Fire
+                - generic [ref=e805]: Angebote ab € 16,40
+            - group "15 / 16" [ref=e806]:
+              - link "Yayoi Kusama Yayoi Kusama Tickets ab € 21,30" [ref=e807] [cursor=pointer]:
+                - /url: /artist/yayoikusama/yayoi-kusama-4075176/
+                - img "Yayoi Kusama" [ref=e808]
+                - generic [ref=e809]: Yayoi Kusama
+                - generic [ref=e810]: Tickets ab € 21,30
+            - group "16 / 16" [ref=e811]:
+              - link "Five Finger Death Punch Five Finger Death Punch Tickets ab € 71,49" [ref=e812] [cursor=pointer]:
+                - /url: /artist/five-finger-death-punch/
+                - img "Five Finger Death Punch" [ref=e813]
+                - generic [ref=e814]: Five Finger Death Punch
+                - generic [ref=e815]: Tickets ab € 71,49
+          - button "Nächstes Karussell-Element" [ref=e816] [cursor=pointer]:
+            - generic [ref=e817]: 
+      - generic [ref=e823]:
+        - generic [ref=e824]: Ticketalarm
+        - textbox "search" [ref=e828]:
+          - /placeholder: Hier Künstlername eingeben
+      - generic [ref=e830]:
+        - heading "Ausstellungen" [level=2] [ref=e831]
+        - generic [ref=e833]:
+          - button "Vorheriges Karussell-Element" [disabled]:
+            - generic: 
+          - generic [ref=e835]:
+            - group "1 / 12" [ref=e836]:
+              - link "UDOVERSUM - Die große Udo Lindenberg Ausstellung UDOVERSUM - Die große Udo Lindenberg Ausstellung Tickets ab € 18,00" [ref=e837] [cursor=pointer]:
+                - /url: /artist/udoversum-die-grosse-udo-lindenberg-ausstellung/
+                - img "UDOVERSUM - Die große Udo Lindenberg Ausstellung" [ref=e838]
+                - generic [ref=e839]: UDOVERSUM - Die große Udo Lindenberg Ausstellung
+                - generic [ref=e840]: Tickets ab € 18,00
+            - group "2 / 12" [ref=e841]:
+              - link "SERIENKILLER - Die True Crime Ausstellung SERIENKILLER - Die True Crime Ausstellung Erfahre spannende Ermittlungshintergründe und pyschologische Fakten realer Kriminfälle! Mehr erfahren" [ref=e842] [cursor=pointer]:
+                - /url: https://www.eventim.de/campaign/serienkiller-die-true-crime-ausstellung/?affiliate=EVE
+                - img "SERIENKILLER - Die True Crime Ausstellung" [ref=e843]
+                - generic [ref=e844]: SERIENKILLER - Die True Crime Ausstellung
+                - generic [ref=e846]: Erfahre spannende Ermittlungshintergründe und pyschologische Fakten realer Kriminfälle!
+                - generic [ref=e847]: Mehr erfahren
+            - group "3 / 12" [ref=e848]:
+              - link "Bubble Planet Bubble Planet Tauche ein in eine bunte Welt! Mehr erfahren" [ref=e849] [cursor=pointer]:
+                - /url: https://www.eventim.de/campaign/bubble-planet/?affiliate=EVE
+                - img "Bubble Planet" [ref=e850]
+                - generic [ref=e851]: Bubble Planet
+                - generic [ref=e853]: Tauche ein in eine bunte Welt!
+                - generic [ref=e854]: Mehr erfahren
+            - group "4 / 12" [ref=e855]:
+              - link "POLAR EXPERIENCE - Die Immersive Ausstellung POLAR EXPERIENCE - Die Immersive Ausstellung Eine einzigartige Reise durch eisige Welten! Mehr erfahren" [ref=e856] [cursor=pointer]:
+                - /url: https://www.eventim.de/campaign/polar-experience/?affiliate=EVE
+                - img "POLAR EXPERIENCE - Die Immersive Ausstellung" [ref=e857]
+                - generic [ref=e858]: POLAR EXPERIENCE - Die Immersive Ausstellung
+                - generic [ref=e860]: Eine einzigartige Reise durch eisige Welten!
+                - generic [ref=e861]: Mehr erfahren
+            - group "5 / 12" [ref=e862]:
+              - 'link "Jurassic World: The Experience Jurassic World: The Experience Begib dich auf eine Reise in die Welt der Dinosaurier! Mehr erfahren" [ref=e863] [cursor=pointer]':
+                - /url: https://www.eventim.de/campaign/jurassic-world-the-experience/?affiliate=EVE
+                - 'img "Jurassic World: The Experience" [ref=e864]'
+                - generic [ref=e865]: "Jurassic World: The Experience"
+                - generic [ref=e867]: Begib dich auf eine Reise in die Welt der Dinosaurier!
+                - generic [ref=e868]: Mehr erfahren
+            - group "6 / 12" [ref=e869]:
+              - 'link "Titanic: Eine immersive Reise Titanic: Eine immersive Reise Tauche ein in eine zeitlose Reise! Mehr erfahren!" [ref=e870] [cursor=pointer]':
+                - /url: https://www.eventim.de/campaign/titanic-eine-immersive-reise/?affiliate=EVE
+                - 'img "Titanic: Eine immersive Reise" [ref=e871]'
+                - generic [ref=e872]: "Titanic: Eine immersive Reise"
+                - generic [ref=e874]: Tauche ein in eine zeitlose Reise!
+                - generic [ref=e875]: Mehr erfahren!
+            - group "7 / 12" [ref=e876]:
+              - link "House of Banksy House of Banksy An Unauthorized Exhibition Jetzt Tickets sichern!" [ref=e877] [cursor=pointer]:
+                - /url: https://www.eventim.de/campaign/house-of-banksy/?affiliate=EVE
+                - img "House of Banksy" [ref=e878]
+                - generic [ref=e879]: House of Banksy
+                - generic [ref=e881]: An Unauthorized Exhibition
+                - generic [ref=e882]: Jetzt Tickets sichern!
+            - group "8 / 12" [ref=e883]:
+              - 'link "Titanic: Die Ausstellung Titanic: Die Ausstellung Entdecke Geschichte wie nie zuvor! Mehr erfahren!" [ref=e884] [cursor=pointer]':
+                - /url: https://www.eventim.de/campaign/titanic-die-ausstellung/?affiliate=EVE
+                - 'img "Titanic: Die Ausstellung" [ref=e885]'
+                - generic [ref=e886]: "Titanic: Die Ausstellung"
+                - generic [ref=e888]: Entdecke Geschichte wie nie zuvor!
+                - generic [ref=e889]: Mehr erfahren!
+            - group "9 / 12" [ref=e890]:
+              - link "The Mystery Of Banksy - A Genius Mind The Mystery Of Banksy - A Genius Mind Banksy ist ein Mysterium Mehr erfahren!" [ref=e891] [cursor=pointer]:
+                - /url: https://www.eventim.de/campaign/the-mystery-of-banksy-a-genius-mind/?affiliate=EVE
+                - img "The Mystery Of Banksy - A Genius Mind" [ref=e892]
+                - generic [ref=e893]: The Mystery Of Banksy - A Genius Mind
+                - generic [ref=e895]: Banksy ist ein Mysterium
+                - generic [ref=e896]: Mehr erfahren!
+            - group "10 / 12" [ref=e897]:
+              - link "TUTANCHAMUN TUTANCHAMUN Ein Immersives Abenteuer Jetzt Tickets sichern" [ref=e898] [cursor=pointer]:
+                - /url: https://www.eventim.de/campaign/tutanchamun-ein-immersives-abenteuer/?affiliate=EVE
+                - img "TUTANCHAMUN" [ref=e899]
+                - generic [ref=e900]: TUTANCHAMUN
+                - generic [ref=e902]: Ein Immersives Abenteuer
+                - generic [ref=e903]: Jetzt Tickets sichern
+            - group "11 / 12" [ref=e904]:
+              - link "Paradox Museum – Alles außer gewöhnlich Paradox Museum – Alles außer gewöhnlich Tickets ab € 24,50" [ref=e905] [cursor=pointer]:
+                - /url: /artist/paradox-museum-alles-ausser-gewoehnlich/
+                - img "Paradox Museum – Alles außer gewöhnlich" [ref=e906]
+                - generic [ref=e907]: Paradox Museum – Alles außer gewöhnlich
+                - generic [ref=e908]: Tickets ab € 24,50
+            - group "12 / 12" [ref=e909]:
+              - link "KÖRPERWELTEN KÖRPERWELTEN Tickets ab € 19,00" [ref=e910] [cursor=pointer]:
+                - /url: /artist/koerperwelten/
+                - img "KÖRPERWELTEN" [ref=e911]
+                - generic [ref=e912]: KÖRPERWELTEN
+                - generic [ref=e913]: Tickets ab € 19,00
+          - button "Nächstes Karussell-Element" [ref=e914] [cursor=pointer]:
+            - generic [ref=e915]: 
+      - generic [ref=e919]:
+        - button "Vorheriges Karussell-Element" [disabled]:
+          - generic: 
+        - generic [ref=e921]:
+          - group "1 / 10" [ref=e922]:
+            - link "Geschenkgutschein" [ref=e923] [cursor=pointer]:
+              - /url: https://www.eventim.de/campaign/gutschein/?affiliate=EVE
+              - img "Geschenkgutschein" [ref=e924]
+          - group "2 / 10" [ref=e925]:
+            - link "Live dabei! Festivals und Open Airs 2026" [ref=e926] [cursor=pointer]:
+              - /url: https://www.eventim.de/campaign/festivals/?affiliate=EVE
+              - img "Live dabei! Festivals und Open Airs 2026" [ref=e927]
+          - group "3 / 10" [ref=e928]:
+            - link "Infos zu" [ref=e929] [cursor=pointer]:
+              - /url: /help/updates/
+              - img "Infos zu" [ref=e930]
+          - group "4 / 10" [ref=e931]:
+            - link "Angebote" [ref=e932] [cursor=pointer]:
+              - /url: https://www.eventim.de/campaign/angebote/?affiliate=EVE
+              - img "Angebote" [ref=e933]
+          - group "5 / 10" [ref=e934]:
+            - link "Ausgestellt" [ref=e935] [cursor=pointer]:
+              - /url: https://www.eventim.de/campaign/ausstellungen/?affiliate=EVE
+              - img "Ausgestellt" [ref=e936]
+          - group "6 / 10" [ref=e937]:
+            - link "Musical- & Show-Highlights" [ref=e938] [cursor=pointer]:
+              - /url: https://www.eventim.de/campaign/aktuelle-musicals/?affiliate=EVE
+              - img "Musical- & Show-Highlights" [ref=e939]
+          - group "7 / 10" [ref=e940]:
+            - link "Umfrage" [ref=e941] [cursor=pointer]:
+              - /url: https://survey.quantilope.com/y3Mmh33m6vLueqXPi/H3CNhYhZqcvEgTmJx/n75zPbTHoo4qhvnfM
+              - img "Umfrage" [ref=e942]
+          - group "8 / 10" [ref=e943]:
+            - link "eventimcard" [ref=e944] [cursor=pointer]:
+              - /url: https://www.eventim.de/campaign/eventimcard/?affiliate=EVE
+              - img "eventimcard" [ref=e945]
+          - group "9 / 10" [ref=e946]:
+            - link "KESS berlin" [ref=e947] [cursor=pointer]:
+              - /url: https://www.kessberlin.de/?utm_source=eventim&utm_medium=display&utm_campaign=kess_default_20&utm_content=startseitetypo
+              - img "KESS berlin" [ref=e948]
+          - group "10 / 10" [ref=e949]:
+            - link "EVENTIM.Travel" [ref=e950] [cursor=pointer]:
+              - /url: https://www.eventim-travel.de/?utm_source=eventim&utm_medium=dp&utm_campaign=homepage&utm_content=banner
+              - img "EVENTIM.Travel" [ref=e951]
+        - button "Nächstes Karussell-Element" [ref=e952] [cursor=pointer]:
+          - generic [ref=e953]: 
+      - generic [ref=e955]:
+        - heading "Rock & Pop" [level=2] [ref=e956]:
+          - link "Rock & Pop" [ref=e957] [cursor=pointer]:
+            - /url: /events/konzerte-1/rock-pop-1/
+        - generic [ref=e959]:
+          - button "Vorheriges Karussell-Element" [disabled]:
+            - generic: 
+          - generic [ref=e961]:
+            - group "1 / 17" [ref=e962]:
+              - link "Özcan Deniz Özcan Deniz Tickets ab € 63,50" [ref=e963] [cursor=pointer]:
+                - /url: /artist/oezcan-deniz/
+                - img "Özcan Deniz" [ref=e964]
+                - generic [ref=e965]: Özcan Deniz
+                - generic [ref=e966]: Tickets ab € 63,50
+            - group "2 / 17" [ref=e967]:
+              - link "Die Toten Hosen Die Toten Hosen Tickets ab € 82,00" [ref=e968] [cursor=pointer]:
+                - /url: /artist/die-toten-hosen/die-toten-hosen-trink-aus-wir-muessen-gehen-tour-2027-3914731/
+                - img "Die Toten Hosen" [ref=e969]
+                - generic [ref=e970]: Die Toten Hosen
+                - generic [ref=e971]: Tickets ab € 82,00
+            - group "3 / 17" [ref=e972]:
+              - link "LaFee LaFee Tickets ab € 56,45" [ref=e973] [cursor=pointer]:
+                - /url: /artist/lafee/
+                - img "LaFee" [ref=e974]
+                - generic [ref=e975]: LaFee
+                - generic [ref=e976]: Tickets ab € 56,45
+            - group "4 / 17" [ref=e977]:
+              - link "Adam Lambert Adam Lambert Tickets ab € 58,90" [ref=e978] [cursor=pointer]:
+                - /url: /artist/adam-lambert/
+                - img "Adam Lambert" [ref=e979]
+                - generic [ref=e980]: Adam Lambert
+                - generic [ref=e981]: Tickets ab € 58,90
+            - group "5 / 17" [ref=e982]:
+              - link "Frei.Wild Frei.Wild Tickets ab € 70,50" [ref=e983] [cursor=pointer]:
+                - /url: /artist/frei-wild/
+                - img "Frei.Wild" [ref=e984]
+                - generic [ref=e985]: Frei.Wild
+                - generic [ref=e986]: Tickets ab € 70,50
+            - group "6 / 17" [ref=e987]:
+              - link "Robbie Williams Robbie Williams Tickets ab € 119,20" [ref=e988] [cursor=pointer]:
+                - /url: /artist/robbie-williams/robbie-williams-britpop-4043745/
+                - img "Robbie Williams" [ref=e989]
+                - generic [ref=e990]: Robbie Williams
+                - generic [ref=e991]: Tickets ab € 119,20
+            - group "7 / 17" [ref=e992]:
+              - link "Placebo Placebo Tickets ab € 65,90" [ref=e993] [cursor=pointer]:
+                - /url: /artist/placebo/
+                - img "Placebo" [ref=e994]
+                - generic [ref=e995]: Placebo
+                - generic [ref=e996]: Tickets ab € 65,90
+            - group "8 / 17" [ref=e997]:
+              - link "Olli Schulz Olli Schulz Tickets ab € 22,50" [ref=e998] [cursor=pointer]:
+                - /url: /artist/olli-schulz/
+                - img "Olli Schulz" [ref=e999]
+                - generic [ref=e1000]: Olli Schulz
+                - generic [ref=e1001]: Tickets ab € 22,50
+            - group "9 / 17" [ref=e1002]:
+              - link "PUR PUR Tickets ab € 55,40" [ref=e1003] [cursor=pointer]:
+                - /url: /artist/pur/
+                - img "PUR" [ref=e1004]
+                - generic [ref=e1005]: PUR
+                - generic [ref=e1006]: Tickets ab € 55,40
+            - group "10 / 17" [ref=e1007]:
+              - link "Sportfreunde Stiller Sportfreunde Stiller Tickets ab € 53,75" [ref=e1008] [cursor=pointer]:
+                - /url: /artist/sportfreunde-stiller/
+                - img "Sportfreunde Stiller" [ref=e1009]
+                - generic [ref=e1010]: Sportfreunde Stiller
+                - generic [ref=e1011]: Tickets ab € 53,75
+            - group "11 / 17" [ref=e1012]:
+              - link "Dresden Dolls Dresden Dolls Tickets ab € 44,95" [ref=e1013] [cursor=pointer]:
+                - /url: /artist/dresden-dolls/the-dresden-dolls-yes-virginia-tailors-version-20th-anniversary-tour-4152599/
+                - img "Dresden Dolls" [ref=e1014]
+                - generic [ref=e1015]: Dresden Dolls
+                - generic [ref=e1016]: Tickets ab € 44,95
+            - group "12 / 17" [ref=e1017]:
+              - link "Bosse Bosse Tickets ab € 57,00" [ref=e1018] [cursor=pointer]:
+                - /url: /artist/bosse/bosse-stabile-poesie-tour-2026-3732485/
+                - img "Bosse" [ref=e1019]
+                - generic [ref=e1020]: Bosse
+                - generic [ref=e1021]: Tickets ab € 57,00
+            - group "13 / 17" [ref=e1022]:
+              - link "Montez Montez Tickets ab € 62,95" [ref=e1023] [cursor=pointer]:
+                - /url: /artist/montez/
+                - img "Montez" [ref=e1024]
+                - generic [ref=e1025]: Montez
+                - generic [ref=e1026]: Tickets ab € 62,95
+            - group "14 / 17" [ref=e1027]:
+              - link "Wincent Weiss Wincent Weiss Tickets ab € 65,60" [ref=e1028] [cursor=pointer]:
+                - /url: /artist/wincent-weiss/
+                - img "Wincent Weiss" [ref=e1029]
+                - generic [ref=e1030]: Wincent Weiss
+                - generic [ref=e1031]: Tickets ab € 65,60
+            - group "15 / 17" [ref=e1032]:
+              - link "Paris Paloma Paris Paloma Tickets ab € 42,12" [ref=e1033] [cursor=pointer]:
+                - /url: /artist/paris-paloma/paris-paloma-the-fatal-flaw-tour-4150923/
+                - img "Paris Paloma" [ref=e1034]
+                - generic [ref=e1035]: Paris Paloma
+                - generic [ref=e1036]: Tickets ab € 42,12
+            - group "16 / 17" [ref=e1037]:
+              - link "Johannes Oerding Johannes Oerding Tickets ab € 72,50" [ref=e1038] [cursor=pointer]:
+                - /url: /artist/johannes-oerding/johannes-oerding-sommer-open-airs-2026-4032729/
+                - img "Johannes Oerding" [ref=e1039]
+                - generic [ref=e1040]: Johannes Oerding
+                - generic [ref=e1041]: Tickets ab € 72,50
+            - group "17 / 17" [ref=e1042]:
+              - link "Mehr anzeigen Mehr anzeigen" [ref=e1044] [cursor=pointer]:
+                - /url: /events/konzerte-1/rock-pop-1/
+                - img "Mehr anzeigen" [ref=e1045]
+                - generic [ref=e1046]: Mehr anzeigen
+          - button "Nächstes Karussell-Element" [ref=e1047] [cursor=pointer]:
+            - generic [ref=e1048]: 
+      - generic [ref=e1050]:
+        - heading "VIP & Extras" [level=2] [ref=e1051]:
+          - link "VIP & Extras" [ref=e1052] [cursor=pointer]:
+            - /url: https://www.eventim.de/campaign/vip-special-tickets/
+        - generic [ref=e1054]:
+          - button "Vorheriges Karussell-Element" [disabled]:
+            - generic: 
+          - generic [ref=e1056]:
+            - group "1 / 8" [ref=e1057]:
+              - link "Five Finger Death Punch Five Finger Death Punch VIP Packages" [ref=e1058] [cursor=pointer]:
+                - /url: /artist/five-finger-death-punch/?ptype=vip_packages
+                - img "Five Finger Death Punch" [ref=e1059]
+                - generic [ref=e1060]: Five Finger Death Punch
+                - generic [ref=e1061]: VIP Packages
+            - group "2 / 8" [ref=e1062]:
+              - link "Gims Gims VIP Packages" [ref=e1063] [cursor=pointer]:
+                - /url: /artist/gims/?ptype=vip_packages
+                - img "Gims" [ref=e1064]
+                - generic [ref=e1065]: Gims
+                - generic [ref=e1066]: VIP Packages
+            - group "3 / 8" [ref=e1067]:
+              - link "Kim Wilde Kim Wilde VIP Packages" [ref=e1068] [cursor=pointer]:
+                - /url: /artist/kim-wilde/kim-wilde-the-singles-tour-2027-4135141/?ptype=vip_packages
+                - img "Kim Wilde" [ref=e1069]
+                - generic [ref=e1070]: Kim Wilde
+                - generic [ref=e1071]: VIP Packages
+            - group "4 / 8" [ref=e1072]:
+              - link "Rush Rush VIP Packages" [ref=e1073] [cursor=pointer]:
+                - /url: /artist/rush/?ptype=vip_packages
+                - img "Rush" [ref=e1074]
+                - generic [ref=e1075]: Rush
+                - generic [ref=e1076]: VIP Packages
+            - group "5 / 8" [ref=e1077]:
+              - link "Die Fantastischen Vier Die Fantastischen Vier VIP Packages" [ref=e1078] [cursor=pointer]:
+                - /url: /artist/die-fantastischen-vier/die-fantastischen-vier-der-letzte-bus-open-airs-2027-final-tour-26-28-4041925/?ptype=vip_packages
+                - img "Die Fantastischen Vier" [ref=e1079]
+                - generic [ref=e1080]: Die Fantastischen Vier
+                - generic [ref=e1081]: VIP Packages
+            - group "6 / 8" [ref=e1082]:
+              - link "The Black Keys The Black Keys VIP Packages" [ref=e1083] [cursor=pointer]:
+                - /url: /artist/the-black-keys/?ptype=vip_packages
+                - img "The Black Keys" [ref=e1084]
+                - generic [ref=e1085]: The Black Keys
+                - generic [ref=e1086]: VIP Packages
+            - group "7 / 8" [ref=e1087]:
+              - link "Helene Fischer Helene Fischer VIP Packages" [ref=e1088] [cursor=pointer]:
+                - /url: /artist/helene-fischer/?ptype=vip_packages
+                - img "Helene Fischer" [ref=e1089]
+                - generic [ref=e1090]: Helene Fischer
+                - generic [ref=e1091]: VIP Packages
+            - group "8 / 8" [ref=e1092]:
+              - link "Mehr anzeigen Mehr anzeigen" [ref=e1094] [cursor=pointer]:
+                - /url: https://www.eventim.de/campaign/vip-special-tickets/
+                - img "Mehr anzeigen" [ref=e1095]
+                - generic [ref=e1096]: Mehr anzeigen
+          - button "Nächstes Karussell-Element" [ref=e1097] [cursor=pointer]:
+            - generic [ref=e1098]: 
+      - generic [ref=e1100]:
+        - heading "HipHop & R’n‘B" [level=2] [ref=e1101]:
+          - link "HipHop & R’n‘B" [ref=e1102] [cursor=pointer]:
+            - /url: /events/konzerte-1/hiphop-rnb-3/
+        - generic [ref=e1104]:
+          - button "Vorheriges Karussell-Element" [disabled]:
+            - generic: 
+          - generic [ref=e1106]:
+            - group "1 / 17" [ref=e1107]:
+              - link "Ayliva Ayliva Tickets ab € 72,90" [ref=e1108] [cursor=pointer]:
+                - /url: /artist/ayliva/ayliva-open-air-4114914/
+                - img "Ayliva" [ref=e1109]
+                - generic [ref=e1110]: Ayliva
+                - generic [ref=e1111]: Tickets ab € 72,90
+            - group "2 / 17" [ref=e1112]:
+              - link "Jan Delay Jan Delay Tickets ab € 34,48" [ref=e1113] [cursor=pointer]:
+                - /url: /artist/jan-delay/jan-delay-disko-no-1-best-of-25-2-years-die-tour-3925408/
+                - img "Jan Delay" [ref=e1114]
+                - generic [ref=e1115]: Jan Delay
+                - generic [ref=e1116]: Tickets ab € 34,48
+            - group "3 / 17" [ref=e1117]:
+              - link "Apache 207 Apache 207 Tickets ab € 70,40" [ref=e1118] [cursor=pointer]:
+                - /url: /artist/apache-207/
+                - img "Apache 207" [ref=e1119]
+                - generic [ref=e1120]: Apache 207
+                - generic [ref=e1121]: Tickets ab € 70,40
+            - group "4 / 17" [ref=e1122]:
+              - link "ZAH1DE ZAH1DE Tickets ab € 48,50" [ref=e1123] [cursor=pointer]:
+                - /url: /artist/zah1de/zah1de-open-air-2026-4015965/
+                - img "ZAH1DE" [ref=e1124]
+                - generic [ref=e1125]: ZAH1DE
+                - generic [ref=e1126]: Tickets ab € 48,50
+            - group "5 / 17" [ref=e1127]:
+              - link "BLOK3 BLOK3 Tickets ab € 64,95" [ref=e1128] [cursor=pointer]:
+                - /url: /artist/blok3/
+                - img "BLOK3" [ref=e1129]
+                - generic [ref=e1130]: BLOK3
+                - generic [ref=e1131]: Tickets ab € 64,95
+            - group "6 / 17" [ref=e1132]:
+              - link "Marteria Marteria Tickets ab € 55,40" [ref=e1133] [cursor=pointer]:
+                - /url: /artist/marteria/marteria-zum-glueck-in-die-zukunft-tour-2026-3955917/
+                - img "Marteria" [ref=e1134]
+                - generic [ref=e1135]: Marteria
+                - generic [ref=e1136]: Tickets ab € 55,40
+            - group "7 / 17" [ref=e1137]:
+              - link "Culcha Candela Culcha Candela Tickets ab € 54,60" [ref=e1138] [cursor=pointer]:
+                - /url: /artist/culcha-candela/culcha-candela-monsta-open-air-3726522/
+                - img "Culcha Candela" [ref=e1139]
+                - generic [ref=e1140]: Culcha Candela
+                - generic [ref=e1141]: Tickets ab € 54,60
+            - group "8 / 17" [ref=e1142]:
+              - link "CANEY030 CANEY030 Tickets ab € 43,48" [ref=e1143] [cursor=pointer]:
+                - /url: /artist/caney-030/
+                - img "CANEY030" [ref=e1144]
+                - generic [ref=e1145]: CANEY030
+                - generic [ref=e1146]: Tickets ab € 43,48
+            - group "9 / 17" [ref=e1147]:
+              - link "Nina Chuba Nina Chuba Tickets ab € 51,50" [ref=e1148] [cursor=pointer]:
+                - /url: /artist/nina-chuba/nina-chuba-sommershows-2026-3948920/
+                - img "Nina Chuba" [ref=e1149]
+                - generic [ref=e1150]: Nina Chuba
+                - generic [ref=e1151]: Tickets ab € 51,50
+            - group "10 / 17" [ref=e1152]:
+              - link "Xzibit Xzibit Tickets ab € 50,44" [ref=e1153] [cursor=pointer]:
+                - /url: /artist/xzibit/
+                - img "Xzibit" [ref=e1154]
+                - generic [ref=e1155]: Xzibit
+                - generic [ref=e1156]: Tickets ab € 50,44
+            - group "11 / 17" [ref=e1157]:
+              - link "NE-YO NE-YO Tickets ab € 67,60" [ref=e1158] [cursor=pointer]:
+                - /url: /artist/ne-yo/
+                - img "NE-YO" [ref=e1159]
+                - generic [ref=e1160]: NE-YO
+                - generic [ref=e1161]: Tickets ab € 67,60
+            - group "12 / 17" [ref=e1162]:
+              - link "Gims Gims Tickets ab € 63,00" [ref=e1163] [cursor=pointer]:
+                - /url: /artist/gims/
+                - img "Gims" [ref=e1164]
+                - generic [ref=e1165]: Gims
+                - generic [ref=e1166]: Tickets ab € 63,00
+            - group "13 / 17" [ref=e1167]:
+              - link "Jazeek Jazeek Tickets ab € 61,10" [ref=e1168] [cursor=pointer]:
+                - /url: /artist/jazeek/jazeek-4ever-tour-2026-3801087/
+                - img "Jazeek" [ref=e1169]
+                - generic [ref=e1170]: Jazeek
+                - generic [ref=e1171]: Tickets ab € 61,10
+            - group "14 / 17" [ref=e1172]:
+              - link "Dardan Dardan Tickets ab € 50,50" [ref=e1173] [cursor=pointer]:
+                - /url: /artist/dardan/
+                - img "Dardan" [ref=e1174]
+                - generic [ref=e1175]: Dardan
+                - generic [ref=e1176]: Tickets ab € 50,50
+            - group "15 / 17" [ref=e1177]:
+              - link "Tayc Tayc Tickets ab € 69,90" [ref=e1178] [cursor=pointer]:
+                - /url: /artist/tayc/
+                - img "Tayc" [ref=e1179]
+                - generic [ref=e1180]: Tayc
+                - generic [ref=e1181]: Tickets ab € 69,90
+            - group "16 / 17" [ref=e1182]:
+              - link "Mehnersmoos Mehnersmoos Tickets ab € 54,50" [ref=e1183] [cursor=pointer]:
+                - /url: /artist/mehnersmoos/mehnersmoos-tour-de-arsch-4038620/
+                - img "Mehnersmoos" [ref=e1184]
+                - generic [ref=e1185]: Mehnersmoos
+                - generic [ref=e1186]: Tickets ab € 54,50
+            - group "17 / 17" [ref=e1187]:
+              - link "Mehr anzeigen Mehr anzeigen" [ref=e1189] [cursor=pointer]:
+                - /url: /events/konzerte-1/hiphop-rnb-3/
+                - img "Mehr anzeigen" [ref=e1190]
+                - generic [ref=e1191]: Mehr anzeigen
+          - button "Nächstes Karussell-Element" [ref=e1192] [cursor=pointer]:
+            - generic [ref=e1193]: 
+      - generic [ref=e1195]:
+        - heading "EVENTIM Charts" [level=2] [ref=e1196]
+        - heading "Die beliebtesten Events" [level=3] [ref=e1197]
+        - generic [ref=e1199]:
+          - button "Vorheriges Karussell-Element" [disabled]:
+            - generic: 
+          - generic [ref=e1201]:
+            - group "1 / 10" [ref=e1202]:
+              - link "1 Five Finger Death Punch Five Finger Death Punch Tickets ab € 71,49" [ref=e1203] [cursor=pointer]:
+                - /url: /artist/five-finger-death-punch/
+                - generic [ref=e1204]: "1"
+                - img "Five Finger Death Punch" [ref=e1205]
+                - generic [ref=e1206]: Five Finger Death Punch
+                - generic [ref=e1207]: Tickets ab € 71,49
+            - group "2 / 10" [ref=e1208]:
+              - link "2 Steintor-Weihnachtsrevue Steintor-Weihnachtsrevue Tickets ab € 18,10" [ref=e1209] [cursor=pointer]:
+                - /url: /artist/steintor-weihnachtsrevue/
+                - generic [ref=e1210]: "2"
+                - img "Steintor-Weihnachtsrevue" [ref=e1211]
+                - generic [ref=e1212]: Steintor-Weihnachtsrevue
+                - generic [ref=e1213]: Tickets ab € 18,10
+            - group "3 / 10" [ref=e1214]:
+              - link "3 LUMINISCENCE LUMINISCENCE Tickets ab € 29,99" [ref=e1215] [cursor=pointer]:
+                - /url: /artist/luminiscence/
+                - generic [ref=e1216]: "3"
+                - img "LUMINISCENCE" [ref=e1217]
+                - generic [ref=e1218]: LUMINISCENCE
+                - generic [ref=e1219]: Tickets ab € 29,99
+            - group "4 / 10" [ref=e1220]:
+              - link "4 Herbert Grönemeyer Herbert Grönemeyer Tickets ab € 58,85" [ref=e1221] [cursor=pointer]:
+                - /url: /artist/herbert-groenemeyer/herbert-groenemeyer-open-airs-2027-4015591/
+                - generic [ref=e1222]: "4"
+                - img "Herbert Grönemeyer" [ref=e1223]
+                - generic [ref=e1224]: Herbert Grönemeyer
+                - generic [ref=e1225]: Tickets ab € 58,85
+            - group "5 / 10" [ref=e1226]:
+              - link "5 Mono Inc. Mono Inc. Tickets ab € 52,95" [ref=e1227] [cursor=pointer]:
+                - /url: /artist/mono-inc/mono-inc-symphonic-tour-2027-4022896/
+                - generic [ref=e1228]: "5"
+                - img "Mono Inc." [ref=e1229]
+                - generic [ref=e1230]: Mono Inc.
+                - generic [ref=e1231]: Tickets ab € 52,95
+            - group "6 / 10" [ref=e1232]:
+              - link "6 Against The Current Against The Current Tickets ab € 41,99" [ref=e1233] [cursor=pointer]:
+                - /url: /artist/against-the-current/
+                - generic [ref=e1234]: "6"
+                - img "Against The Current" [ref=e1235]
+                - generic [ref=e1236]: Against The Current
+                - generic [ref=e1237]: Tickets ab € 41,99
+            - group "7 / 10" [ref=e1238]:
+              - link "7 Fantasy Fantasy Tickets ab € 58,50" [ref=e1239] [cursor=pointer]:
+                - /url: /artist/fantasy/fantasy-30-jahre-fantasy-4006928/
+                - generic [ref=e1240]: "7"
+                - img "Fantasy" [ref=e1241]
+                - generic [ref=e1242]: Fantasy
+                - generic [ref=e1243]: Tickets ab € 58,50
+            - group "8 / 10" [ref=e1244]:
+              - link "8 Drei Haselnüsse für Aschenbrödel – Das Musical Drei Haselnüsse für Aschenbrödel – Das Musical Tickets ab € 40,49" [ref=e1245] [cursor=pointer]:
+                - /url: /artist/drei-haselnuesse-fuer-aschenbroedel-das-musical/
+                - generic [ref=e1246]: "8"
+                - img "Drei Haselnüsse für Aschenbrödel – Das Musical" [ref=e1247]
+                - generic [ref=e1248]: Drei Haselnüsse für Aschenbrödel – Das Musical
+                - generic [ref=e1249]: Tickets ab € 40,49
+            - group "9 / 10" [ref=e1250]:
+              - link "9 Die Prinzen Die Prinzen Tickets ab € 59,90" [ref=e1251] [cursor=pointer]:
+                - /url: /artist/die-prinzen/die-prinzen-tschuessi-machts-gut-die-abschiedstournee-4137725/
+                - generic [ref=e1252]: "9"
+                - img "Die Prinzen" [ref=e1253]
+                - generic [ref=e1254]: Die Prinzen
+                - generic [ref=e1255]: Tickets ab € 59,90
+            - group "10 / 10" [ref=e1256]:
+              - link "10 MJ - Das Michael Jackson Musical MJ - Das Michael Jackson Musical Tickets ab € 48,49" [ref=e1257] [cursor=pointer]:
+                - /url: /artist/mj-das-michael-jackson-musical/
+                - generic [ref=e1258]: "10"
+                - img "MJ - Das Michael Jackson Musical" [ref=e1259]
+                - generic [ref=e1260]: MJ - Das Michael Jackson Musical
+                - generic [ref=e1261]: Tickets ab € 48,49
+          - button "Nächstes Karussell-Element" [ref=e1262] [cursor=pointer]:
+            - generic [ref=e1263]: 
+      - generic [ref=e1265]:
+        - heading "Hard & Heavy" [level=2] [ref=e1266]:
+          - link "Hard & Heavy" [ref=e1267] [cursor=pointer]:
+            - /url: /events/konzerte-1/hard-heavy-2/
+        - generic [ref=e1269]:
+          - button "Vorheriges Karussell-Element" [disabled]:
+            - generic: 
+          - generic [ref=e1271]:
+            - group "1 / 17" [ref=e1272]:
+              - link "Deep Purple Deep Purple Tickets ab € 71,99" [ref=e1273] [cursor=pointer]:
+                - /url: /artist/deep-purple/deep-purple-splat-world-tour-2026-4030958/
+                - img "Deep Purple" [ref=e1274]
+                - generic [ref=e1275]: Deep Purple
+                - generic [ref=e1276]: Tickets ab € 71,99
+            - group "2 / 17" [ref=e1277]:
+              - link "Limp Bizkit Limp Bizkit Tickets ab € 89,10" [ref=e1278] [cursor=pointer]:
+                - /url: /artist/limp-bizkit/limp-bizkit-4097224/
+                - img "Limp Bizkit" [ref=e1279]
+                - generic [ref=e1280]: Limp Bizkit
+                - generic [ref=e1281]: Tickets ab € 89,10
+            - group "3 / 17" [ref=e1282]:
+              - link "Iron Maiden Iron Maiden Tickets ab € 99,75" [ref=e1283] [cursor=pointer]:
+                - /url: /artist/iron-maiden/iron-maiden-run-for-your-lives-world-tour-2026-3916232/
+                - img "Iron Maiden" [ref=e1284]
+                - generic [ref=e1285]: Iron Maiden
+                - generic [ref=e1286]: Tickets ab € 99,75
+            - group "4 / 17" [ref=e1287]:
+              - link "Evanescence Evanescence Tickets ab € 65,59" [ref=e1288] [cursor=pointer]:
+                - /url: /artist/evanescence/
+                - img "Evanescence" [ref=e1289]
+                - generic [ref=e1290]: Evanescence
+                - generic [ref=e1291]: Tickets ab € 65,59
+            - group "5 / 17" [ref=e1292]:
+              - link "KoRn KoRn Tickets ab € 79,00" [ref=e1293] [cursor=pointer]:
+                - /url: /artist/korn/
+                - img "KoRn" [ref=e1294]
+                - generic [ref=e1295]: KoRn
+                - generic [ref=e1296]: Tickets ab € 79,00
+            - group "6 / 17" [ref=e1297]:
+              - link "Bad Omens Bad Omens Tickets ab € 79,30" [ref=e1298] [cursor=pointer]:
+                - /url: /artist/bad-omens/bad-omens-3993406/
+                - img "Bad Omens" [ref=e1299]
+                - generic [ref=e1300]: Bad Omens
+                - generic [ref=e1301]: Tickets ab € 79,30
+            - group "7 / 17" [ref=e1302]:
+              - link "Broilers Broilers Tickets ab € 65,00" [ref=e1303] [cursor=pointer]:
+                - /url: /artist/broilers/broilers-open-airs-2026-3842333/
+                - img "Broilers" [ref=e1304]
+                - generic [ref=e1305]: Broilers
+                - generic [ref=e1306]: Tickets ab € 65,00
+            - group "8 / 17" [ref=e1307]:
+              - link "Manowar Manowar Tickets ab € 77,95" [ref=e1308] [cursor=pointer]:
+                - /url: /artist/manowar/
+                - img "Manowar" [ref=e1309]
+                - generic [ref=e1310]: Manowar
+                - generic [ref=e1311]: Tickets ab € 77,95
+            - group "9 / 17" [ref=e1312]:
+              - link "Amon Amarth Amon Amarth Tickets ab € 48,75" [ref=e1313] [cursor=pointer]:
+                - /url: /artist/amon-amarth/amon-amarth-the-allfather-awakens-europe-uk-2026-4032778/
+                - img "Amon Amarth" [ref=e1314]
+                - generic [ref=e1315]: Amon Amarth
+                - generic [ref=e1316]: Tickets ab € 48,75
+            - group "10 / 17" [ref=e1317]:
+              - link "U.D.O. U.D.O. Tickets ab € 52,30" [ref=e1318] [cursor=pointer]:
+                - /url: /artist/u-d-o-/
+                - img "U.D.O." [ref=e1319]
+                - generic [ref=e1320]: U.D.O.
+                - generic [ref=e1321]: Tickets ab € 52,30
+            - group "11 / 17" [ref=e1322]:
+              - link "Five Finger Death Punch Five Finger Death Punch Tickets ab € 71,49" [ref=e1323] [cursor=pointer]:
+                - /url: /artist/five-finger-death-punch/
+                - img "Five Finger Death Punch" [ref=e1324]
+                - generic [ref=e1325]: Five Finger Death Punch
+                - generic [ref=e1326]: Tickets ab € 71,49
+            - group "12 / 17" [ref=e1327]:
+              - link "Guilt Trip Guilt Trip Tickets ab € 39,20" [ref=e1328] [cursor=pointer]:
+                - /url: /artist/guilt-trip/guilt-trip-armour-of-angels-tour-2026-3869215/
+                - img "Guilt Trip" [ref=e1329]
+                - generic [ref=e1330]: Guilt Trip
+                - generic [ref=e1331]: Tickets ab € 39,20
+            - group "13 / 17" [ref=e1332]:
+              - link "Rush Rush Tickets ab € 117,35" [ref=e1333] [cursor=pointer]:
+                - /url: /artist/rush/
+                - img "Rush" [ref=e1334]
+                - generic [ref=e1335]: Rush
+                - generic [ref=e1336]: Tickets ab € 117,35
+            - group "14 / 17" [ref=e1337]:
+              - link "Delain Delain Tickets ab € 46,95" [ref=e1338] [cursor=pointer]:
+                - /url: /artist/delain/
+                - img "Delain" [ref=e1339]
+                - generic [ref=e1340]: Delain
+                - generic [ref=e1341]: Tickets ab € 46,95
+            - group "15 / 17" [ref=e1342]:
+              - link "Spiritbox Spiritbox Tickets ab € 51,99" [ref=e1343] [cursor=pointer]:
+                - /url: /artist/spiritbox/spiritbox-tsunami-sea-tour-2026-4093525/
+                - img "Spiritbox" [ref=e1344]
+                - generic [ref=e1345]: Spiritbox
+                - generic [ref=e1346]: Tickets ab € 51,99
+            - group "16 / 17" [ref=e1347]:
+              - link "Heisskalt Heisskalt Tickets ab € 39,20" [ref=e1348] [cursor=pointer]:
+                - /url: /artist/heisskalt/heisskalt-das-bleibt-hier-tour-2026-vom-stehen-und-fallen-mit-liebe-gebraut-live-4146561/
+                - img "Heisskalt" [ref=e1349]
+                - generic [ref=e1350]: Heisskalt
+                - generic [ref=e1351]: Tickets ab € 39,20
+            - group "17 / 17" [ref=e1352]:
+              - link "Mehr anzeigen Mehr anzeigen" [ref=e1354] [cursor=pointer]:
+                - /url: /events/konzerte-1/hard-heavy-2/
+                - img "Mehr anzeigen" [ref=e1355]
+                - generic [ref=e1356]: Mehr anzeigen
+          - button "Nächstes Karussell-Element" [ref=e1357] [cursor=pointer]:
+            - generic [ref=e1358]: 
+      - generic [ref=e1360]:
+        - heading "Musical & Show" [level=2] [ref=e1361]:
+          - link "Musical & Show" [ref=e1362] [cursor=pointer]:
+            - /url: /events/musical-show-4/
+        - generic [ref=e1364]:
+          - button "Vorheriges Karussell-Element" [disabled]:
+            - generic: 
+          - generic [ref=e1366]:
+            - group "1 / 17" [ref=e1367]:
+              - link "Die Einladung - nach Sebastian Fitzek Die Einladung - nach Sebastian Fitzek Tickets ab € 33,90" [ref=e1368] [cursor=pointer]:
+                - /url: /artist/die-einladung-sebastian-fitzek/
+                - img "Die Einladung - nach Sebastian Fitzek" [ref=e1369]
+                - generic [ref=e1370]: Die Einladung - nach Sebastian Fitzek
+                - generic [ref=e1371]: Tickets ab € 33,90
+            - group "2 / 17" [ref=e1372]:
+              - link "MJ - Das Michael Jackson Musical MJ - Das Michael Jackson Musical Tickets ab € 48,49" [ref=e1373] [cursor=pointer]:
+                - /url: /artist/mj-das-michael-jackson-musical/
+                - img "MJ - Das Michael Jackson Musical" [ref=e1374]
+                - generic [ref=e1375]: MJ - Das Michael Jackson Musical
+                - generic [ref=e1376]: Tickets ab € 48,49
+            - group "3 / 17" [ref=e1377]:
+              - link "Ehrlich Brothers Ehrlich Brothers Tickets ab € 52,50" [ref=e1378] [cursor=pointer]:
+                - /url: /artist/ehrlich-brothers/ehrlich-brothers-live-2255099/
+                - img "Ehrlich Brothers" [ref=e1379]
+                - generic [ref=e1380]: Ehrlich Brothers
+                - generic [ref=e1381]: Tickets ab € 52,50
+            - group "4 / 17" [ref=e1382]:
+              - link "Blue Man Group - Tour Blue Man Group - Tour Tickets ab € 31,90" [ref=e1383] [cursor=pointer]:
+                - /url: /artist/blue-man-group-tour/
+                - img "Blue Man Group - Tour" [ref=e1384]
+                - generic [ref=e1385]: Blue Man Group - Tour
+                - generic [ref=e1386]: Tickets ab € 31,90
+            - group "5 / 17" [ref=e1387]:
+              - link "Harry Potter und das verwunschene Kind Harry Potter und das verwunschene Kind Tickets ab € 73,99" [ref=e1388] [cursor=pointer]:
+                - /url: /artist/harry-potter-und-das-verwunschene-kind/harry-potter-und-das-verwunschene-kind-3457860/
+                - img "Harry Potter und das verwunschene Kind" [ref=e1389]
+                - generic [ref=e1390]: Harry Potter und das verwunschene Kind
+                - generic [ref=e1391]: Tickets ab € 73,99
+            - group "6 / 17" [ref=e1392]:
+              - link "The World of Hans Zimmer The World of Hans Zimmer Tickets ab € 65,40" [ref=e1393] [cursor=pointer]:
+                - /url: /artist/the-world-of-hans-zimmer/
+                - img "The World of Hans Zimmer" [ref=e1394]
+                - generic [ref=e1395]: The World of Hans Zimmer
+                - generic [ref=e1396]: Tickets ab € 65,40
+            - group "7 / 17" [ref=e1397]:
+              - link "Moulin Rouge! Das Musical Moulin Rouge! Das Musical Tickets ab € 63,99 Sarah Engels als Satine" [ref=e1398] [cursor=pointer]:
+                - /url: /artist/moulin-rouge-das-musical/moulin-rouge-das-musical-in-koeln-3457869/
+                - img "Moulin Rouge! Das Musical" [ref=e1399]
+                - generic [ref=e1400]: Moulin Rouge! Das Musical
+                - generic [ref=e1401]: Tickets ab € 63,99
+                - generic [ref=e1403]: Sarah Engels als Satine
+            - group "8 / 17" [ref=e1404]:
+              - link "Cirque du Soleil ALIZÉ Cirque du Soleil ALIZÉ Tickets ab € 58,75" [ref=e1405] [cursor=pointer]:
+                - /url: /artist/cirque-du-soleil-alize/
+                - img "Cirque du Soleil ALIZÉ" [ref=e1406]
+                - generic [ref=e1407]: Cirque du Soleil ALIZÉ
+                - generic [ref=e1408]: Tickets ab € 58,75
+            - group "9 / 17" [ref=e1409]:
+              - link "Disneys DER KÖNIG DER LÖWEN Disneys DER KÖNIG DER LÖWEN Tickets ab € 76,49" [ref=e1410] [cursor=pointer]:
+                - /url: /artist/disneys-der-koenig-der-loewen/
+                - img "Disneys DER KÖNIG DER LÖWEN" [ref=e1411]
+                - generic [ref=e1412]: Disneys DER KÖNIG DER LÖWEN
+                - generic [ref=e1413]: Tickets ab € 76,49
+            - group "10 / 17" [ref=e1414]:
+              - link "Alexander Stevens & Jacqueline Belle Alexander Stevens & Jacqueline Belle Tickets ab € 40,40" [ref=e1415] [cursor=pointer]:
+                - /url: /artist/alexander-stevens/
+                - img "Alexander Stevens & Jacqueline Belle" [ref=e1416]
+                - generic [ref=e1417]: Alexander Stevens & Jacqueline Belle
+                - generic [ref=e1418]: Tickets ab € 40,40
+            - group "11 / 17" [ref=e1419]:
+              - link "greenbeats greenbeats Tickets ab € 20,40" [ref=e1420] [cursor=pointer]:
+                - /url: /artist/greenbeats/
+                - img "greenbeats" [ref=e1421]
+                - generic [ref=e1422]: greenbeats
+                - generic [ref=e1423]: Tickets ab € 20,40
+            - group "12 / 17" [ref=e1424]:
+              - link "PAULBERGER Show PAULBERGER Show Tickets ab € 39,99" [ref=e1425] [cursor=pointer]:
+                - /url: /artist/paulberger-show/
+                - img "PAULBERGER Show" [ref=e1426]
+                - generic [ref=e1427]: PAULBERGER Show
+                - generic [ref=e1428]: Tickets ab € 39,99
+            - group "13 / 17" [ref=e1429]:
+              - link "BEAT IT! – Die Erfolgsshow über den King of Pop! BEAT IT! – Die Erfolgsshow über den King of Pop! Tickets ab € 53,50" [ref=e1430] [cursor=pointer]:
+                - /url: /artist/beat-it/
+                - img "BEAT IT! – Die Erfolgsshow über den King of Pop!" [ref=e1431]
+                - generic [ref=e1432]: BEAT IT! – Die Erfolgsshow über den King of Pop!
+                - generic [ref=e1433]: Tickets ab € 53,50
+            - group "14 / 17" [ref=e1434]:
+              - link "Sister Act - Das Himmlische Musical Sister Act - Das Himmlische Musical Tickets ab € 34,10 Kombiticket Mai Deals" [ref=e1435] [cursor=pointer]:
+                - /url: /artist/sister-act-das-himmlische-musical/
+                - img "Sister Act - Das Himmlische Musical" [ref=e1436]
+                - generic [ref=e1437]: Sister Act - Das Himmlische Musical
+                - generic [ref=e1438]: Tickets ab € 34,10
+                - generic [ref=e1440]: Kombiticket
+                - generic [ref=e1442]: Mai Deals
+            - group "15 / 17" [ref=e1443]:
+              - link "This is THE GREATEST SHOW! This is THE GREATEST SHOW! Tickets ab € 40,40" [ref=e1444] [cursor=pointer]:
+                - /url: /artist/this-is-the-greatest-show/this-is-the-greatest-show-die-groessten-musical-hits-aller-zeiten-tour-2027-4098069/
+                - img "This is THE GREATEST SHOW!" [ref=e1445]
+                - generic [ref=e1446]: This is THE GREATEST SHOW!
+                - generic [ref=e1447]: Tickets ab € 40,40
+            - group "16 / 17" [ref=e1448]:
+              - link "Holiday on Ice Holiday on Ice Tickets ab € 36,30" [ref=e1449] [cursor=pointer]:
+                - /url: /artist/holiday-on-ice/holiday-on-ice-neue-show-20262027-3767706/
+                - img "Holiday on Ice" [ref=e1450]
+                - generic [ref=e1451]: Holiday on Ice
+                - generic [ref=e1452]: Tickets ab € 36,30
+            - group "17 / 17" [ref=e1453]:
+              - link "Mehr anzeigen Mehr anzeigen" [ref=e1455] [cursor=pointer]:
+                - /url: /events/musical-show-4/
+                - img "Mehr anzeigen" [ref=e1456]
+                - generic [ref=e1457]: Mehr anzeigen
+          - button "Nächstes Karussell-Element" [ref=e1458] [cursor=pointer]:
+            - generic [ref=e1459]: 
+      - generic [ref=e1461]:
+        - heading "Humor" [level=2] [ref=e1462]:
+          - link "Humor" [ref=e1463] [cursor=pointer]:
+            - /url: /events/humor-5/
+        - generic [ref=e1465]:
+          - button "Vorheriges Karussell-Element" [disabled]:
+            - generic: 
+          - generic [ref=e1467]:
+            - group "1 / 17" [ref=e1468]:
+              - link "EMMVEE EMMVEE Tickets ab € 40,45" [ref=e1469] [cursor=pointer]:
+                - /url: /artist/emmvee/emmvee-war-das-zu-hart-3525367/
+                - img "EMMVEE" [ref=e1470]
+                - generic [ref=e1471]: EMMVEE
+                - generic [ref=e1472]: Tickets ab € 40,45
+            - group "2 / 17" [ref=e1473]:
+              - link "Özcan Cosar Özcan Cosar Tickets ab € 42,10" [ref=e1474] [cursor=pointer]:
+                - /url: /artist/oezcan-cosar/oezcan-cosar-vip-3752728/
+                - img "Özcan Cosar" [ref=e1475]
+                - generic [ref=e1476]: Özcan Cosar
+                - generic [ref=e1477]: Tickets ab € 42,10
+            - group "3 / 17" [ref=e1478]:
+              - link "Osan Yaran Osan Yaran Tickets ab € 43,45" [ref=e1479] [cursor=pointer]:
+                - /url: /artist/osan-yaran/osan-yaran-wollen-wir-beginnen-4096647/
+                - img "Osan Yaran" [ref=e1480]
+                - generic [ref=e1481]: Osan Yaran
+                - generic [ref=e1482]: Tickets ab € 43,45
+            - group "4 / 17" [ref=e1483]:
+              - link "Helge Schneider Helge Schneider Tickets ab € 34,40" [ref=e1484] [cursor=pointer]:
+                - /url: /artist/helge-schneider/helge-schneider-ellebogen-vom-tich-3848516/
+                - img "Helge Schneider" [ref=e1485]
+                - generic [ref=e1486]: Helge Schneider
+                - generic [ref=e1487]: Tickets ab € 34,40
+            - group "5 / 17" [ref=e1488]:
+              - link "Chris Tall Chris Tall Tickets ab € 40,40" [ref=e1489] [cursor=pointer]:
+                - /url: /artist/chris-tall/
+                - img "Chris Tall" [ref=e1490]
+                - generic [ref=e1491]: Chris Tall
+                - generic [ref=e1492]: Tickets ab € 40,40
+            - group "6 / 17" [ref=e1493]:
+              - link "Olaf Schubert Olaf Schubert Tickets ab € 26,08" [ref=e1494] [cursor=pointer]:
+                - /url: /artist/olaf-schubert/olaf-schubert-seine-freunde-jetzt-oder-now-3581174/
+                - img "Olaf Schubert" [ref=e1495]
+                - generic [ref=e1496]: Olaf Schubert
+                - generic [ref=e1497]: Tickets ab € 26,08
+            - group "7 / 17" [ref=e1498]:
+              - link "Sascha Grammel Sascha Grammel Tickets ab € 40,40" [ref=e1499] [cursor=pointer]:
+                - /url: /artist/sascha-grammel/sascha-grammel-wuensch-dir-was-3259690/
+                - img "Sascha Grammel" [ref=e1500]
+                - generic [ref=e1501]: Sascha Grammel
+                - generic [ref=e1502]: Tickets ab € 40,40
+            - group "8 / 17" [ref=e1503]:
+              - link "Monika Gruber Monika Gruber Tickets ab € 51,00" [ref=e1504] [cursor=pointer]:
+                - /url: /artist/monika-gruber/monika-gruber-es-huift-ja-nix-3548472/
+                - img "Monika Gruber" [ref=e1505]
+                - generic [ref=e1506]: Monika Gruber
+                - generic [ref=e1507]: Tickets ab € 51,00
+            - group "9 / 17" [ref=e1508]:
+              - link "Kaya Yanar Kaya Yanar Tickets ab € 40,40" [ref=e1509] [cursor=pointer]:
+                - /url: /artist/kaya-yanar/kaya-yanar-lost-3341229/
+                - img "Kaya Yanar" [ref=e1510]
+                - generic [ref=e1511]: Kaya Yanar
+                - generic [ref=e1512]: Tickets ab € 40,40
+            - group "10 / 17" [ref=e1513]:
+              - link "Jimmy Carr Jimmy Carr Tickets ab € 50,25" [ref=e1514] [cursor=pointer]:
+                - /url: /artist/jimmy-carr/
+                - img "Jimmy Carr" [ref=e1515]
+                - generic [ref=e1516]: Jimmy Carr
+                - generic [ref=e1517]: Tickets ab € 50,25
+            - group "11 / 17" [ref=e1518]:
+              - link "Johann König Johann König Tickets ab € 37,90" [ref=e1519] [cursor=pointer]:
+                - /url: /artist/johann-koenig/johann-koenig-heute-ein-koenig-3945613/
+                - img "Johann König" [ref=e1520]
+                - generic [ref=e1521]: Johann König
+                - generic [ref=e1522]: Tickets ab € 37,90
+            - group "12 / 17" [ref=e1523]:
+              - link "Ralf Schmitz Ralf Schmitz Tickets ab € 50,40" [ref=e1524] [cursor=pointer]:
+                - /url: /artist/ralf-schmitz/
+                - img "Ralf Schmitz" [ref=e1525]
+                - generic [ref=e1526]: Ralf Schmitz
+                - generic [ref=e1527]: Tickets ab € 50,40
+            - group "13 / 17" [ref=e1528]:
+              - link "Tutty Tran Tutty Tran Tickets ab € 40,95" [ref=e1529] [cursor=pointer]:
+                - /url: /artist/tutty-tran/tutty-tran-wok-life-balance-3778914/
+                - img "Tutty Tran" [ref=e1530]
+                - generic [ref=e1531]: Tutty Tran
+                - generic [ref=e1532]: Tickets ab € 40,95
+            - group "14 / 17" [ref=e1533]:
+              - link "Torsten Sträter Torsten Sträter Tickets ab € 35,30" [ref=e1534] [cursor=pointer]:
+                - /url: /artist/torsten-straeter/torsten-straeter-die-zyklopen-von-saint-tropez-4003810/
+                - img "Torsten Sträter" [ref=e1535]
+                - generic [ref=e1536]: Torsten Sträter
+                - generic [ref=e1537]: Tickets ab € 35,30
+            - group "15 / 17" [ref=e1538]:
+              - link "Paul Panzer Paul Panzer Tickets ab € 32,90" [ref=e1539] [cursor=pointer]:
+                - /url: /artist/paul-panzer/paul-panzer-schoene-neue-welt-welcome-to-hell-3785329/
+                - img "Paul Panzer" [ref=e1540]
+                - generic [ref=e1541]: Paul Panzer
+                - generic [ref=e1542]: Tickets ab € 32,90
+            - group "16 / 17" [ref=e1543]:
+              - link "Mario Barth Mario Barth Tickets ab € 43,00" [ref=e1544] [cursor=pointer]:
+                - /url: /artist/mario-barth/mario-barth-maenner-sind-nichts-ohne-die-frauen-3628634/
+                - img "Mario Barth" [ref=e1545]
+                - generic [ref=e1546]: Mario Barth
+                - generic [ref=e1547]: Tickets ab € 43,00
+            - group "17 / 17" [ref=e1548]:
+              - link "Mehr anzeigen Mehr anzeigen" [ref=e1550] [cursor=pointer]:
+                - /url: /events/humor-5/
+                - img "Mehr anzeigen" [ref=e1551]
+                - generic [ref=e1552]: Mehr anzeigen
+          - button "Nächstes Karussell-Element" [ref=e1553] [cursor=pointer]:
+            - generic [ref=e1554]: 
+      - generic [ref=e1558]:
+        - text: 
+        - generic [ref=e1560]:
+          - group "1 / 4" [ref=e1561]:
+            - link "EVENTIM-News" [ref=e1562] [cursor=pointer]:
+              - /url: https://www.eventim.de/campaign/eventim-news/?affiliate=EVE
+              - img "EVENTIM-News" [ref=e1563]
+          - group "2 / 4" [ref=e1564]:
+            - link "VIP & Extras" [ref=e1565] [cursor=pointer]:
+              - /url: https://www.eventim.de/campaign/vip-special-tickets/?affiliate=EVE
+              - img "VIP & Extras" [ref=e1566]
+          - group "3 / 4" [ref=e1567]:
+            - link "Headliner" [ref=e1568] [cursor=pointer]:
+              - /url: https://www.eventim.de/magazin/
+              - img "Headliner" [ref=e1569]
+          - group "4 / 4" [ref=e1570]:
+            - link "fanSALE Verkauf" [ref=e1571] [cursor=pointer]:
+              - /url: https://www.eventim.de/campaign/fansale/tickets-sicher-verkaufen-von-fan-zu-fan/?affiliate=EVE
+              - img "fanSALE Verkauf" [ref=e1572]
+        - text: 
+      - generic [ref=e1574]:
+        - heading "Schlager & Volksmusik" [level=2] [ref=e1575]:
+          - link "Schlager & Volksmusik" [ref=e1576] [cursor=pointer]:
+            - /url: /events/konzerte-1/schlager-volksmusik-5/
+        - generic [ref=e1578]:
+          - button "Vorheriges Karussell-Element" [disabled]:
+            - generic: 
+          - generic [ref=e1580]:
+            - group "1 / 17" [ref=e1581]:
+              - link "Mia Julia Mia Julia Tickets ab € 50,40" [ref=e1582] [cursor=pointer]:
+                - /url: /artist/mia-julia/mia-julia-queen-of-party-arena-tour-3671566/
+                - img "Mia Julia" [ref=e1583]
+                - generic [ref=e1584]: Mia Julia
+                - generic [ref=e1585]: Tickets ab € 50,40
+            - group "2 / 17" [ref=e1586]:
+              - link "OLÉ Party-Tour - Die größte Mallorca Party-Tour der Welt OLÉ Party-Tour - Die größte Mallorca Party-Tour der Welt Tickets ab € 35,50" [ref=e1587] [cursor=pointer]:
+                - /url: /artist/ole-party-tour/
+                - img "OLÉ Party-Tour - Die größte Mallorca Party-Tour der Welt" [ref=e1588]
+                - generic [ref=e1589]: OLÉ Party-Tour - Die größte Mallorca Party-Tour der Welt
+                - generic [ref=e1590]: Tickets ab € 35,50
+            - group "3 / 17" [ref=e1591]:
+              - link "Helene Fischer Helene Fischer Tickets ab € 71,90" [ref=e1592] [cursor=pointer]:
+                - /url: /artist/helene-fischer/
+                - img "Helene Fischer" [ref=e1593]
+                - generic [ref=e1594]: Helene Fischer
+                - generic [ref=e1595]: Tickets ab € 71,90
+            - group "4 / 17" [ref=e1596]:
+              - link "Andrea Berg Andrea Berg Tickets ab € 50,40" [ref=e1597] [cursor=pointer]:
+                - /url: /artist/andrea-berg/andrea-berg-live-2027-3754157/
+                - img "Andrea Berg" [ref=e1598]
+                - generic [ref=e1599]: Andrea Berg
+                - generic [ref=e1600]: Tickets ab € 50,40
+            - group "5 / 17" [ref=e1601]:
+              - link "Fantasy Fantasy Tickets ab € 58,50" [ref=e1602] [cursor=pointer]:
+                - /url: /artist/fantasy/fantasy-30-jahre-fantasy-4006928/
+                - img "Fantasy" [ref=e1603]
+                - generic [ref=e1604]: Fantasy
+                - generic [ref=e1605]: Tickets ab € 58,50
+            - group "6 / 17" [ref=e1606]:
+              - link "Die Schlagernacht des Jahres Die Schlagernacht des Jahres Tickets ab € 59,90" [ref=e1607] [cursor=pointer]:
+                - /url: /artist/die-schlagernacht-des-jahres/
+                - img "Die Schlagernacht des Jahres" [ref=e1608]
+                - generic [ref=e1609]: Die Schlagernacht des Jahres
+                - generic [ref=e1610]: Tickets ab € 59,90
+            - group "7 / 17" [ref=e1611]:
+              - link "Andy Borg Andy Borg Tickets ab € 53,85" [ref=e1612] [cursor=pointer]:
+                - /url: /artist/andy-borg/schlager-spass-mit-andy-borg-und-gaesten-3172152/
+                - img "Andy Borg" [ref=e1613]
+                - generic [ref=e1614]: Andy Borg
+                - generic [ref=e1615]: Tickets ab € 53,85
+            - group "8 / 17" [ref=e1616]:
+              - link "Mireille Mathieu Mireille Mathieu Tickets ab € 62,70" [ref=e1617] [cursor=pointer]:
+                - /url: /artist/mireille-mathieu/
+                - img "Mireille Mathieu" [ref=e1618]
+                - generic [ref=e1619]: Mireille Mathieu
+                - generic [ref=e1620]: Tickets ab € 62,70
+            - group "9 / 17" [ref=e1621]:
+              - link "Roland Kaiser Roland Kaiser Tickets ab € 75,40" [ref=e1622] [cursor=pointer]:
+                - /url: /artist/roland-kaiser/roland-kaiser-das-open-air-2026-3967548/
+                - img "Roland Kaiser" [ref=e1623]
+                - generic [ref=e1624]: Roland Kaiser
+                - generic [ref=e1625]: Tickets ab € 75,40
+            - group "10 / 17" [ref=e1626]:
+              - link "Ben Zucker Ben Zucker Tickets ab € 68,40" [ref=e1627] [cursor=pointer]:
+                - /url: /artist/ben-zucker/ben-zucker-kaempferherz-die-open-airs-2026-3657553/
+                - img "Ben Zucker" [ref=e1628]
+                - generic [ref=e1629]: Ben Zucker
+                - generic [ref=e1630]: Tickets ab € 68,40
+            - group "11 / 17" [ref=e1631]:
+              - link "Beatrice Egli Beatrice Egli Tickets ab € 60,40" [ref=e1632] [cursor=pointer]:
+                - /url: /artist/beatrice-egli/beatrice-egli-tanzen-lachen-leben-die-tournee-2026-3869718/
+                - img "Beatrice Egli" [ref=e1633]
+                - generic [ref=e1634]: Beatrice Egli
+                - generic [ref=e1635]: Tickets ab € 60,40
+            - group "12 / 17" [ref=e1636]:
+              - link "Alex Parker Alex Parker Tickets ab € 24,39" [ref=e1637] [cursor=pointer]:
+                - /url: /artist/alex-parker/
+                - img "Alex Parker" [ref=e1638]
+                - generic [ref=e1639]: Alex Parker
+                - generic [ref=e1640]: Tickets ab € 24,39
+            - group "13 / 17" [ref=e1641]:
+              - link "DJ Ötzi DJ Ötzi Tickets ab € 59,50" [ref=e1642] [cursor=pointer]:
+                - /url: /artist/dj-oetzi/dj-oetzi-praesentiert-mountain-mania-die-groesste-gipfelparty-jenseits-der-alpen-3768129/
+                - img "DJ Ötzi" [ref=e1643]
+                - generic [ref=e1644]: DJ Ötzi
+                - generic [ref=e1645]: Tickets ab € 59,50
+            - group "14 / 17" [ref=e1646]:
+              - link "Nicole Nicole Tickets ab € 52,65" [ref=e1647] [cursor=pointer]:
+                - /url: /artist/nicole/
+                - img "Nicole" [ref=e1648]
+                - generic [ref=e1649]: Nicole
+                - generic [ref=e1650]: Tickets ab € 52,65
+            - group "15 / 17" [ref=e1651]:
+              - link "Olaf der Flipper Olaf der Flipper Tickets ab € 40,40" [ref=e1652] [cursor=pointer]:
+                - /url: /artist/olaf-der-flipper/olaf-der-flipper-wir-sagen-dankeschoen-80-jahre-die-geburtstagstournee-2026-3986528/
+                - img "Olaf der Flipper" [ref=e1653]
+                - generic [ref=e1654]: Olaf der Flipper
+                - generic [ref=e1655]: Tickets ab € 40,40
+            - group "16 / 17" [ref=e1656]:
+              - link "Kastelruther Spatzen Kastelruther Spatzen Tickets ab € 46,05" [ref=e1657] [cursor=pointer]:
+                - /url: /artist/kastelruther-spatzen/kastelruther-spatzen-3691826/
+                - img "Kastelruther Spatzen" [ref=e1658]
+                - generic [ref=e1659]: Kastelruther Spatzen
+                - generic [ref=e1660]: Tickets ab € 46,05
+            - group "17 / 17" [ref=e1661]:
+              - link "Mehr anzeigen Mehr anzeigen" [ref=e1663] [cursor=pointer]:
+                - /url: /events/konzerte-1/schlager-volksmusik-5/
+                - img "Mehr anzeigen" [ref=e1664]
+                - generic [ref=e1665]: Mehr anzeigen
+          - button "Nächstes Karussell-Element" [ref=e1666] [cursor=pointer]:
+            - generic [ref=e1667]: 
+      - generic [ref=e1669]:
+        - heading "Sport" [level=2] [ref=e1670]:
+          - link "Sport" [ref=e1671] [cursor=pointer]:
+            - /url: /events/sport-3/
+        - generic [ref=e1673]:
+          - button "Vorheriges Karussell-Element" [disabled]:
+            - generic: 
+          - generic [ref=e1675]:
+            - group "1 / 17" [ref=e1676]:
+              - link "Hamburger SV Hamburger SV Tickets ab € 11,50" [ref=e1677] [cursor=pointer]:
+                - /url: /artist/hsv/
+                - img "Hamburger SV" [ref=e1678]
+                - generic [ref=e1679]: Hamburger SV
+                - generic [ref=e1680]: Tickets ab € 11,50
+            - group "2 / 17" [ref=e1681]:
+              - link "DBB Nationalmannschaft DBB Nationalmannschaft Tickets ab € 51,00" [ref=e1682] [cursor=pointer]:
+                - /url: /artist/dbb-nationalmannschaft/dbb-supercup-2026-4152583/
+                - img "DBB Nationalmannschaft" [ref=e1683]
+                - generic [ref=e1684]: DBB Nationalmannschaft
+                - generic [ref=e1685]: Tickets ab € 51,00
+            - group "3 / 17" [ref=e1686]:
+              - link "OKTAGON MMA OKTAGON MMA Tickets ab € 49,50" [ref=e1687] [cursor=pointer]:
+                - /url: /artist/oktagon-mma/oktagon-94-frankfurt-4054383/
+                - img "OKTAGON MMA" [ref=e1688]
+                - generic [ref=e1689]: OKTAGON MMA
+                - generic [ref=e1690]: Tickets ab € 49,50
+            - group "4 / 17" [ref=e1691]:
+              - link "DHB Nationalmannschaft DHB Nationalmannschaft Tickets ab € 88,00" [ref=e1692] [cursor=pointer]:
+                - /url: /artist/dhb-nationalmannschaft/
+                - img "DHB Nationalmannschaft" [ref=e1693]
+                - generic [ref=e1694]: DHB Nationalmannschaft
+                - generic [ref=e1695]: Tickets ab € 88,00
+            - group "5 / 17" [ref=e1696]:
+              - link "DEB Nationalmannschaft DEB Nationalmannschaft Tickets ab € 18,50" [ref=e1697] [cursor=pointer]:
+                - /url: /artist/deb-nationalmannschaft/
+                - img "DEB Nationalmannschaft" [ref=e1698]
+                - generic [ref=e1699]: DEB Nationalmannschaft
+                - generic [ref=e1700]: Tickets ab € 18,50
+            - group "6 / 17" [ref=e1701]:
+              - link "Doppelpass Doppelpass Tickets ab € 41,00" [ref=e1702] [cursor=pointer]:
+                - /url: /artist/doppelpass/
+                - img "Doppelpass" [ref=e1703]
+                - generic [ref=e1704]: Doppelpass
+                - generic [ref=e1705]: Tickets ab € 41,00
+            - group "7 / 17" [ref=e1706]:
+              - link "IHF Handball-Weltmeisterschaft der Männer IHF Handball-Weltmeisterschaft der Männer Angebote ab € 48,00" [ref=e1707] [cursor=pointer]:
+                - /url: /artist/ihf-handball-weltmeisterschaft-der-maenner/2027-ihf-wm-hannover-tagestickets-4026661/
+                - img "IHF Handball-Weltmeisterschaft der Männer" [ref=e1708]
+                - generic [ref=e1709]: IHF Handball-Weltmeisterschaft der Männer
+                - generic [ref=e1710]: Angebote ab € 48,00
+            - group "8 / 17" [ref=e1711]:
+              - link "GRIP - Das Motorevent GRIP - Das Motorevent Tickets ab € 19,15" [ref=e1712] [cursor=pointer]:
+                - /url: /artist/grip-das-motorevent/grip-das-motorevent-am-nuerburgring-3973449/
+                - img "GRIP - Das Motorevent" [ref=e1713]
+                - generic [ref=e1714]: GRIP - Das Motorevent
+                - generic [ref=e1715]: Tickets ab € 19,15
+            - group "9 / 17" [ref=e1716]:
+              - link "Terra Wortmann Open Terra Wortmann Open Tickets ab € 37,00" [ref=e1717] [cursor=pointer]:
+                - /url: /artist/terra-wortmann-open/
+                - img "Terra Wortmann Open" [ref=e1718]
+                - generic [ref=e1719]: Terra Wortmann Open
+                - generic [ref=e1720]: Tickets ab € 37,00
+            - group "10 / 17" [ref=e1721]:
+              - link "Rhein Fire Rhein Fire Angebote ab € 16,40" [ref=e1722] [cursor=pointer]:
+                - /url: /artist/rhein-fire/
+                - img "Rhein Fire" [ref=e1723]
+                - generic [ref=e1724]: Rhein Fire
+                - generic [ref=e1725]: Angebote ab € 16,40
+            - group "11 / 17" [ref=e1726]:
+              - link "Fortnite Major 1 Summit Fortnite Major 1 Summit Tickets ab € 32,35" [ref=e1727] [cursor=pointer]:
+                - /url: /artist/fortnite-major-1-summit/
+                - img "Fortnite Major 1 Summit" [ref=e1728]
+                - generic [ref=e1729]: Fortnite Major 1 Summit
+                - generic [ref=e1730]: Tickets ab € 32,35
+            - group "12 / 17" [ref=e1731]:
+              - link "Hamburg Open ATP500 Hamburg Open ATP500 Tickets ab € 42,00" [ref=e1732] [cursor=pointer]:
+                - /url: /artist/hamburg-open-atp500/
+                - img "Hamburg Open ATP500" [ref=e1733]
+                - generic [ref=e1734]: Hamburg Open ATP500
+                - generic [ref=e1735]: Tickets ab € 42,00
+            - group "13 / 17" [ref=e1736]:
+              - link "Mario Basler Mario Basler Tickets ab € 37,40" [ref=e1737] [cursor=pointer]:
+                - /url: /artist/mario-basler/
+                - img "Mario Basler" [ref=e1738]
+                - generic [ref=e1739]: Mario Basler
+                - generic [ref=e1740]: Tickets ab € 37,40
+            - group "14 / 17" [ref=e1741]:
+              - link "Reiner Calmund Reiner Calmund Tickets ab € 35,20" [ref=e1742] [cursor=pointer]:
+                - /url: /artist/reiner-calmund/
+                - img "Reiner Calmund" [ref=e1743]
+                - generic [ref=e1744]: Reiner Calmund
+                - generic [ref=e1745]: Tickets ab € 35,20
+            - group "15 / 17" [ref=e1746]:
+              - link "Bremen Darts Gala Bremen Darts Gala Tickets ab € 42,00" [ref=e1747] [cursor=pointer]:
+                - /url: /artist/bremen-darts-gala/
+                - img "Bremen Darts Gala" [ref=e1748]
+                - generic [ref=e1749]: Bremen Darts Gala
+                - generic [ref=e1750]: Tickets ab € 42,00
+            - group "16 / 17" [ref=e1751]:
+              - 'link "Snooker: German Masters Snooker: German Masters Tickets ab € 44,60" [ref=e1752] [cursor=pointer]':
+                - /url: /artist/snooker-german-masters/
+                - 'img "Snooker: German Masters" [ref=e1753]'
+                - generic [ref=e1754]: "Snooker: German Masters"
+                - generic [ref=e1755]: Tickets ab € 44,60
+            - group "17 / 17" [ref=e1756]:
+              - link "Mehr anzeigen Mehr anzeigen" [ref=e1758] [cursor=pointer]:
+                - /url: /events/sport-3/
+                - img "Mehr anzeigen" [ref=e1759]
+                - generic [ref=e1760]: Mehr anzeigen
+          - button "Nächstes Karussell-Element" [ref=e1761] [cursor=pointer]:
+            - generic [ref=e1762]: 
+      - generic [ref=e1764]:
+        - heading "Weitere Empfehlungen" [level=2] [ref=e1765]
+        - generic [ref=e1767]:
+          - button "Vorheriges Karussell-Element" [disabled]:
+            - generic: 
+          - generic [ref=e1769]:
+            - group "1 / 9" [ref=e1770]:
+              - 'link "Titanic: Eine Immersive Reise Titanic: Eine Immersive Reise Angebote ab € 26,00" [ref=e1771] [cursor=pointer]':
+                - /url: /artist/titanic-eine-immersive-reise/
+                - 'img "Titanic: Eine Immersive Reise" [ref=e1772]'
+                - generic [ref=e1773]: "Titanic: Eine Immersive Reise"
+                - generic [ref=e1774]: Angebote ab € 26,00
+            - group "2 / 9" [ref=e1775]:
+              - link "Harry Potter und das verwunschene Kind Harry Potter und das verwunschene Kind Tickets ab € 73,99" [ref=e1776] [cursor=pointer]:
+                - /url: /artist/harry-potter-und-das-verwunschene-kind/harry-potter-und-das-verwunschene-kind-3457860/
+                - img "Harry Potter und das verwunschene Kind" [ref=e1777]
+                - generic [ref=e1778]: Harry Potter und das verwunschene Kind
+                - generic [ref=e1779]: Tickets ab € 73,99
+            - group "3 / 9" [ref=e1780]:
+              - link "Chris Tall Chris Tall Tickets ab € 40,40" [ref=e1781] [cursor=pointer]:
+                - /url: /artist/chris-tall/
+                - img "Chris Tall" [ref=e1782]
+                - generic [ref=e1783]: Chris Tall
+                - generic [ref=e1784]: Tickets ab € 40,40
+            - group "4 / 9" [ref=e1785]:
+              - link "Pretty Woman - Das Musical Pretty Woman - Das Musical Der Welthit neu inszeniert als Musical! Jetzt entdecken" [ref=e1786] [cursor=pointer]:
+                - /url: https://www.eventim.de/campaign/musicals/pretty-woman-das-musical/?affiliate=EVE
+                - img "Pretty Woman - Das Musical" [ref=e1787]
+                - generic [ref=e1788]: Pretty Woman - Das Musical
+                - generic [ref=e1790]: Der Welthit neu inszeniert als Musical!
+                - generic [ref=e1791]: Jetzt entdecken
+            - group "5 / 9" [ref=e1792]:
+              - link "Moulin Rouge! Das Musical Moulin Rouge! Das Musical Tickets ab € 63,99 Sarah Engels als Satine" [ref=e1793] [cursor=pointer]:
+                - /url: /artist/moulin-rouge-das-musical/moulin-rouge-das-musical-in-koeln-3457869/
+                - img "Moulin Rouge! Das Musical" [ref=e1794]
+                - generic [ref=e1795]: Moulin Rouge! Das Musical
+                - generic [ref=e1796]: Tickets ab € 63,99
+                - generic [ref=e1798]: Sarah Engels als Satine
+            - group "6 / 9" [ref=e1799]:
+              - link "Dieter Nuhr Dieter Nuhr Tickets ab € 35,45" [ref=e1800] [cursor=pointer]:
+                - /url: /artist/dieter-nuhr/
+                - img "Dieter Nuhr" [ref=e1801]
+                - generic [ref=e1802]: Dieter Nuhr
+                - generic [ref=e1803]: Tickets ab € 35,45
+            - group "7 / 9" [ref=e1804]:
+              - link "Die CHER Show - Das Musical über die Göttin des Pop Die CHER Show - Das Musical über die Göttin des Pop Das Musical über die Göttin des Pop Mehr erfahren!" [ref=e1805] [cursor=pointer]:
+                - /url: https://www.eventim.de/campaign/die-cher-show-das-musical-ueber-die-goettin-des-pop/?affiliate=EVE
+                - img "Die CHER Show - Das Musical über die Göttin des Pop" [ref=e1806]
+                - generic [ref=e1807]: Die CHER Show - Das Musical über die Göttin des Pop
+                - generic [ref=e1809]: Das Musical über die Göttin des Pop
+                - generic [ref=e1810]: Mehr erfahren!
+            - group "8 / 9" [ref=e1811]:
+              - link "Starlight Express Starlight Express Tickets ab € 63,99" [ref=e1812] [cursor=pointer]:
+                - /url: /artist/starlight-express/starlight-express-3457854/
+                - img "Starlight Express" [ref=e1813]
+                - generic [ref=e1814]: Starlight Express
+                - generic [ref=e1815]: Tickets ab € 63,99
+            - group "9 / 9" [ref=e1816]:
+              - link "Kinky Boots - The Musical Kinky Boots - The Musical" [ref=e1817] [cursor=pointer]:
+                - /url: /artist/kinky-boots-the-musical/kinky-boots-the-musical-3841718/
+                - img "Kinky Boots - The Musical" [ref=e1818]
+                - generic [ref=e1819]: Kinky Boots - The Musical
+          - button "Nächstes Karussell-Element" [ref=e1820] [cursor=pointer]:
+            - generic [ref=e1821]: 
+      - generic [ref=e1823]:
+        - heading "Kultur" [level=2] [ref=e1824]:
+          - link "Kultur" [ref=e1825] [cursor=pointer]:
+            - /url: /events/kultur-2/
+        - generic [ref=e1827]:
+          - button "Vorheriges Karussell-Element" [disabled]:
+            - generic: 
+          - generic [ref=e1829]:
+            - group "1 / 17" [ref=e1830]:
+              - link "Dieter Hallervorden Dieter Hallervorden Tickets ab € 44,35" [ref=e1831] [cursor=pointer]:
+                - /url: /artist/dieter-hallervorden/unkaputtbar-90-jahre-hallervorden-4015825/
+                - img "Dieter Hallervorden" [ref=e1832]
+                - generic [ref=e1833]: Dieter Hallervorden
+                - generic [ref=e1834]: Tickets ab € 44,35
+            - group "2 / 17" [ref=e1835]:
+              - link "Ludovico Einaudi Ludovico Einaudi Tickets ab € 98,00" [ref=e1836] [cursor=pointer]:
+                - /url: /artist/ludovico-einaudi/ludovico-einaudi-live-in-koeln-4110499/
+                - img "Ludovico Einaudi" [ref=e1837]
+                - generic [ref=e1838]: Ludovico Einaudi
+                - generic [ref=e1839]: Tickets ab € 98,00
+            - group "3 / 17" [ref=e1840]:
+              - link "David Garrett David Garrett Tickets ab € 71,00 Mai Deals" [ref=e1841] [cursor=pointer]:
+                - /url: /artist/david-garrett/
+                - img "David Garrett" [ref=e1842]
+                - generic [ref=e1843]: David Garrett
+                - generic [ref=e1844]: Tickets ab € 71,00
+                - generic [ref=e1846]: Mai Deals
+            - group "4 / 17" [ref=e1847]:
+              - link "Lars Eidinger Lars Eidinger Tickets ab € 42,00" [ref=e1848] [cursor=pointer]:
+                - /url: /artist/lars-eidinger/lars-eidinger-bertolt-brecht-hauspostille-3472266/
+                - img "Lars Eidinger" [ref=e1849]
+                - generic [ref=e1850]: Lars Eidinger
+                - generic [ref=e1851]: Tickets ab € 42,00
+            - group "5 / 17" [ref=e1852]:
+              - link "Annika Preil Annika Preil Tickets ab € 38,50" [ref=e1853] [cursor=pointer]:
+                - /url: /artist/annika-preil/
+                - img "Annika Preil" [ref=e1854]
+                - generic [ref=e1855]: Annika Preil
+                - generic [ref=e1856]: Tickets ab € 38,50
+            - group "6 / 17" [ref=e1857]:
+              - link "Juli Zeh Juli Zeh Tickets ab € 37,95" [ref=e1858] [cursor=pointer]:
+                - /url: /artist/juli-zeh/
+                - img "Juli Zeh" [ref=e1859]
+                - generic [ref=e1860]: Juli Zeh
+                - generic [ref=e1861]: Tickets ab € 37,95
+            - group "7 / 17" [ref=e1862]:
+              - link "Riverdance Riverdance Tickets ab € 58,10" [ref=e1863] [cursor=pointer]:
+                - /url: /artist/riverdance/
+                - img "Riverdance" [ref=e1864]
+                - generic [ref=e1865]: Riverdance
+                - generic [ref=e1866]: Tickets ab € 58,10
+            - group "8 / 17" [ref=e1867]:
+              - link "Constantin Schreiber Constantin Schreiber Tickets ab € 38,70" [ref=e1868] [cursor=pointer]:
+                - /url: /artist/constantin-schreiber/constantin-schreiber-live-sagen-was-ist-4147824/
+                - img "Constantin Schreiber" [ref=e1869]
+                - generic [ref=e1870]: Constantin Schreiber
+                - generic [ref=e1871]: Tickets ab € 38,70
+            - group "9 / 17" [ref=e1872]:
+              - link "André Rieu André Rieu Tickets ab € 63,00" [ref=e1873] [cursor=pointer]:
+                - /url: /artist/andre-rieu/andre-rieu-tour-2027-4109350/
+                - img "André Rieu" [ref=e1874]
+                - generic [ref=e1875]: André Rieu
+                - generic [ref=e1876]: Tickets ab € 63,00
+            - group "10 / 17" [ref=e1877]:
+              - link "Dr. Mark Benecke Dr. Mark Benecke Tickets ab € 31,75" [ref=e1878] [cursor=pointer]:
+                - /url: /artist/dr-mark-benecke/dr-mark-benecke-live-202627-3498372/
+                - img "Dr. Mark Benecke" [ref=e1879]
+                - generic [ref=e1880]: Dr. Mark Benecke
+                - generic [ref=e1881]: Tickets ab € 31,75
+            - group "11 / 17" [ref=e1882]:
+              - link "Max Raabe & Palast Orchester Max Raabe & Palast Orchester Tickets ab € 32,90" [ref=e1883] [cursor=pointer]:
+                - /url: /artist/max-raabe-palast-orchester/max-raabe-palast-orchester-neues-programm-2027-4044094/
+                - img "Max Raabe & Palast Orchester" [ref=e1884]
+                - generic [ref=e1885]: Max Raabe & Palast Orchester
+                - generic [ref=e1886]: Tickets ab € 32,90
+            - group "12 / 17" [ref=e1887]:
+              - link "The Music of Hans Zimmer & Others The Music of Hans Zimmer & Others Tickets ab € 29,99" [ref=e1888] [cursor=pointer]:
+                - /url: /artist/the-music-of-hans-zimmer-and-others/
+                - img "The Music of Hans Zimmer & Others" [ref=e1889]
+                - generic [ref=e1890]: The Music of Hans Zimmer & Others
+                - generic [ref=e1891]: Tickets ab € 29,99
+            - group "13 / 17" [ref=e1892]:
+              - link "Contra Kreis Theater Bonn Contra Kreis Theater Bonn Tickets ab € 22,40" [ref=e1893] [cursor=pointer]:
+                - /url: /artist/contra-kreis-theater-bonn/s-o-s-im-paradies-das-abba-musical-von-stephan-ohm-mit-tanja-bahmani-u-a-3929248/
+                - img "Contra Kreis Theater Bonn" [ref=e1894]
+                - generic [ref=e1895]: Contra Kreis Theater Bonn
+                - generic [ref=e1896]: Tickets ab € 22,40
+            - group "14 / 17" [ref=e1897]:
+              - 'link "Afara - Ugur Aslan: Bir Arabesk Müzikali Afara - Ugur Aslan: Bir Arabesk Müzikali Tickets ab € 48,26" [ref=e1898] [cursor=pointer]':
+                - /url: /eventseries/afara-ugur-aslan-bir-arabesk-muezikali-4108668/
+                - 'img "Afara - Ugur Aslan: Bir Arabesk Müzikali" [ref=e1899]'
+                - generic [ref=e1900]: "Afara - Ugur Aslan: Bir Arabesk Müzikali"
+                - generic [ref=e1901]: Tickets ab € 48,26
+            - group "15 / 17" [ref=e1902]:
+              - link "Philharmonie Leipzig Philharmonie Leipzig Tickets ab € 40,70" [ref=e1903] [cursor=pointer]:
+                - /url: /artist/philharmonie-leipzig/filmmusik-live-von-hans-zimmer-bis-john-williams-philharmonie-leipzig-3290009/
+                - img "Philharmonie Leipzig" [ref=e1904]
+                - generic [ref=e1905]: Philharmonie Leipzig
+                - generic [ref=e1906]: Tickets ab € 40,70
+            - group "16 / 17" [ref=e1907]:
+              - link "Schwanensee - Ballett mit Orchester Schwanensee - Ballett mit Orchester Tickets ab € 28,50" [ref=e1908] [cursor=pointer]:
+                - /url: /artist/schwanensee-ballett-mit-orchester/schwanensee-ballett-mit-orchester-2026-3809698/
+                - img "Schwanensee - Ballett mit Orchester" [ref=e1909]
+                - generic [ref=e1910]: Schwanensee - Ballett mit Orchester
+                - generic [ref=e1911]: Tickets ab € 28,50
+            - group "17 / 17" [ref=e1912]:
+              - link "Mehr anzeigen Mehr anzeigen" [ref=e1914] [cursor=pointer]:
+                - /url: /events/kultur-2/
+                - img "Mehr anzeigen" [ref=e1915]
+                - generic [ref=e1916]: Mehr anzeigen
+          - button "Nächstes Karussell-Element" [ref=e1917] [cursor=pointer]:
+            - generic [ref=e1918]: 
+      - generic [ref=e1920]:
+        - heading "Freizeit" [level=2] [ref=e1921]:
+          - link "Freizeit" [ref=e1922] [cursor=pointer]:
+            - /url: /events/freizeit-7/
+        - generic [ref=e1924]:
+          - button "Vorheriges Karussell-Element" [disabled]:
+            - generic: 
+          - generic [ref=e1926]:
+            - group "1 / 17" [ref=e1927]:
+              - link "Bastian Pastewka Bastian Pastewka Tickets ab € 24,20" [ref=e1928] [cursor=pointer]:
+                - /url: /artist/bastian-pastewka/bastian-pastewka-4137826/
+                - img "Bastian Pastewka" [ref=e1929]
+                - generic [ref=e1930]: Bastian Pastewka
+                - generic [ref=e1931]: Tickets ab € 24,20
+            - group "2 / 17" [ref=e1932]:
+              - 'link "TUTANCHAMUN: Ein Immersives Abenteuer TUTANCHAMUN: Ein Immersives Abenteuer Angebote ab € 18,00" [ref=e1933] [cursor=pointer]':
+                - /url: /artist/tutanchamun-ein-immersives-abenteuer/tutanchamun-hannover-zeitfenstertickets-4092642/
+                - 'img "TUTANCHAMUN: Ein Immersives Abenteuer" [ref=e1934]'
+                - generic [ref=e1935]: "TUTANCHAMUN: Ein Immersives Abenteuer"
+                - generic [ref=e1936]: Angebote ab € 18,00
+            - group "3 / 17" [ref=e1937]:
+              - link "die 80er live die 80er live Tickets ab € 62,80 Aktionsrabatt" [ref=e1938] [cursor=pointer]:
+                - /url: /artist/die-80er-live/die-80er-live-hamburg-2026-3892041/
+                - img "die 80er live" [ref=e1939]
+                - generic [ref=e1940]: die 80er live
+                - generic [ref=e1941]: Tickets ab € 62,80
+                - generic [ref=e1943]: Aktionsrabatt
+            - group "4 / 17" [ref=e1944]:
+              - link "Circus Krone Circus Krone Tickets ab € 20,50 Mai Deals" [ref=e1945] [cursor=pointer]:
+                - /url: /artist/circus-krone/circus-krone-praesentiert-farbenspiel-gold-edition-heidelberg-4089867/
+                - img "Circus Krone" [ref=e1946]
+                - generic [ref=e1947]: Circus Krone
+                - generic [ref=e1948]: Tickets ab € 20,50
+                - generic [ref=e1950]: Mai Deals
+            - group "5 / 17" [ref=e1951]:
+              - link "90s Super Show 90s Super Show Tickets ab € 34,40" [ref=e1952] [cursor=pointer]:
+                - /url: /artist/90s-super-show/
+                - img "90s Super Show" [ref=e1953]
+                - generic [ref=e1954]: 90s Super Show
+                - generic [ref=e1955]: Tickets ab € 34,40
+            - group "6 / 17" [ref=e1956]:
+              - link "Venga Venga - Deutschlands größte 90er & 2000er Party Venga Venga - Deutschlands größte 90er & 2000er Party Tickets ab € 9,76" [ref=e1957] [cursor=pointer]:
+                - /url: /artist/venga-venga-90er-200er-party/venga-venga-deutschlands-groesste-90er-2000er-party-3472775/
+                - img "Venga Venga - Deutschlands größte 90er & 2000er Party" [ref=e1958]
+                - generic [ref=e1959]: Venga Venga - Deutschlands größte 90er & 2000er Party
+                - generic [ref=e1960]: Tickets ab € 9,76
+            - group "7 / 17" [ref=e1961]:
+              - link "Teeniedisco | Sasa Flensburg Teeniedisco | Sasa Flensburg Tickets ab € 3,90" [ref=e1962] [cursor=pointer]:
+                - /url: /eventseries/teeniedisco-sasa-flensburg-4143535/
+                - img "Teeniedisco | Sasa Flensburg" [ref=e1963]
+                - generic [ref=e1964]: Teeniedisco | Sasa Flensburg
+                - generic [ref=e1965]: Tickets ab € 3,90
+            - group "8 / 17" [ref=e1966]:
+              - link "We are together We are together Tickets ab € 36,70" [ref=e1967] [cursor=pointer]:
+                - /url: /artist/we-are-together/
+                - img "We are together" [ref=e1968]
+                - generic [ref=e1969]: We are together
+                - generic [ref=e1970]: Tickets ab € 36,70
+            - group "9 / 17" [ref=e1971]:
+              - link "Teenie Disco - Tivoli Freiberg - Sachsen Teenie Disco - Tivoli Freiberg - Sachsen Tickets ab € 6,00" [ref=e1972] [cursor=pointer]:
+                - /url: /eventseries/teenie-disco-tivoli-freiberg-sachsen-3985134/
+                - img "Teenie Disco - Tivoli Freiberg - Sachsen" [ref=e1973]
+                - generic [ref=e1974]: Teenie Disco - Tivoli Freiberg - Sachsen
+                - generic [ref=e1975]: Tickets ab € 6,00
+            - group "10 / 17" [ref=e1976]:
+              - link "Creator Day Creator Day Tickets ab € 48,50" [ref=e1977] [cursor=pointer]:
+                - /url: /artist/creator-day/
+                - img "Creator Day" [ref=e1978]
+                - generic [ref=e1979]: Creator Day
+                - generic [ref=e1980]: Tickets ab € 48,50
+            - group "11 / 17" [ref=e1981]:
+              - link "Waterland - Zirkus auf dem Wasser Waterland - Zirkus auf dem Wasser Tickets ab € 21,50" [ref=e1982] [cursor=pointer]:
+                - /url: /artist/waterland-zirkus-auf-dem-wasser/waterland-zirkus-auf-dem-wasser-bielefeld-4114684/
+                - img "Waterland - Zirkus auf dem Wasser" [ref=e1983]
+                - generic [ref=e1984]: Waterland - Zirkus auf dem Wasser
+                - generic [ref=e1985]: Tickets ab € 21,50
+            - group "12 / 17" [ref=e1986]:
+              - link "Circus-Theater Roncalli Circus-Theater Roncalli Tickets ab € 36,20" [ref=e1987] [cursor=pointer]:
+                - /url: /artist/circus-roncalli/circus-theater-roncalli-koeln-4028395/
+                - img "Circus-Theater Roncalli" [ref=e1988]
+                - generic [ref=e1989]: Circus-Theater Roncalli
+                - generic [ref=e1990]: Tickets ab € 36,20
+            - group "13 / 17" [ref=e1991]:
+              - link "Heavysaurus Heavysaurus Tickets ab € 37,35" [ref=e1992] [cursor=pointer]:
+                - /url: /artist/heavysaurus/heavysaurus-metal-tour-202627-3945329/
+                - img "Heavysaurus" [ref=e1993]
+                - generic [ref=e1994]: Heavysaurus
+                - generic [ref=e1995]: Tickets ab € 37,35
+            - group "14 / 17" [ref=e1996]:
+              - link "Jan Becker Jan Becker Tickets ab € 40,40" [ref=e1997] [cursor=pointer]:
+                - /url: /artist/artist-23526/
+                - img "Jan Becker" [ref=e1998]
+                - generic [ref=e1999]: Jan Becker
+                - generic [ref=e2000]: Tickets ab € 40,40
+            - group "15 / 17" [ref=e2001]:
+              - link "Dr. Biyon Kattilathu Dr. Biyon Kattilathu Tickets ab € 40,40" [ref=e2002] [cursor=pointer]:
+                - /url: /artist/dr-biyon-kattilathu/
+                - img "Dr. Biyon Kattilathu" [ref=e2003]
+                - generic [ref=e2004]: Dr. Biyon Kattilathu
+                - generic [ref=e2005]: Tickets ab € 40,40
+            - group "16 / 17" [ref=e2006]:
+              - link "Lichterkinder Lichterkinder Tickets ab € 44,45" [ref=e2007] [cursor=pointer]:
+                - /url: /artist/lichterkinder/lichterkinder-live-millionen-sterne-tour-2026-3853521/
+                - img "Lichterkinder" [ref=e2008]
+                - generic [ref=e2009]: Lichterkinder
+                - generic [ref=e2010]: Tickets ab € 44,45
+            - group "17 / 17" [ref=e2011]:
+              - link "Mehr anzeigen Mehr anzeigen" [ref=e2013] [cursor=pointer]:
+                - /url: /events/freizeit-7/
+                - img "Mehr anzeigen" [ref=e2014]
+                - generic [ref=e2015]: Mehr anzeigen
+          - button "Nächstes Karussell-Element" [ref=e2016] [cursor=pointer]:
+            - generic [ref=e2017]: 
+      - generic [ref=e2021]:
+        - text: 
+        - generic [ref=e2023]:
+          - group "1 / 3" [ref=e2024]:
+            - link "Start Up Teens" [ref=e2025] [cursor=pointer]:
+              - /url: https://www.startupteens.de/
+              - img "Start Up Teens" [ref=e2026]
+          - group "2 / 3" [ref=e2027]:
+            - link "HR - Jobs bei EVENTIM" [ref=e2028] [cursor=pointer]:
+              - /url: https://karriere.eventim.de/
+              - img "HR - Jobs bei EVENTIM" [ref=e2029]
+          - group "3 / 3" [ref=e2030]:
+            - link "Gutschein editorialTrust" [ref=e2031] [cursor=pointer]:
+              - /url: /campaign/gutschein/
+              - img "Gutschein editorialTrust" [ref=e2032]
+        - text: 
+      - generic [ref=e2036]:
+        - button "Vorheriges Karussell-Element" [disabled]:
+          - generic: 
+        - generic [ref=e2038]:
+          - group "1 / 7" [ref=e2039]
+          - group "2 / 7" [ref=e2040]
+          - group "3 / 7" [ref=e2041]
+          - group "4 / 7" [ref=e2042]
+          - group "5 / 7" [ref=e2043]
+          - group "6 / 7" [ref=e2044]
+          - group "7 / 7" [ref=e2045]
+        - button "Nächstes Karussell-Element" [ref=e2046] [cursor=pointer]:
+          - generic [ref=e2047]: 
+      - generic [ref=e2050]:
+        - paragraph [ref=e2051]: "Ob Pop-Show, Rock-Spektakel oder Klassik-Konzert, ob Sport-Event, Comedy-Veranstaltung, Musical-Spektakel oder Theaterbesuch: Bei EVENTIM findest du Eintrittskarten für alle erdenklichen Formen des Live-Entertainments. Über 200.000 Events im Jahr stehen dir auf eventim.de zur Auswahl – aus allen Musik-Genres und Unterhaltungs-Sparten, vom aufstrebenden Indie-Künstler bis hin zu den absoluten Superstars unserer Zeit. Oft kannst du deine Tickets bei EVENTIM sogar exklusiv vor allen anderen kaufen und dir somit die besten Plätze sichern. Viele Karten sind zudem als FanTickets im Tourdesign gestaltet und bleiben dir somit auch nach dem Event als emotionales Erinnerungsstück erhalten."
+        - paragraph [ref=e2052]: Neben den klassischen Eintrittskarten kannst du in unserem Ticketshop bei vielen Events auch Special Tickets buchen, die viele exklusive Extras beinhalten. Attraktive Eventreisen und Gewinnspiele, Geschenkgutscheine und das Online-Magazin HEADLINER mit den wichtigsten News aus der Musikwelt runden das vielfältige Angebot von EVENTIM ab. Und wenn du dich für den Newsletter und den Ticketalarm deiner Lieblingskünstler anmeldest, verpasst du nie wieder einen Vorverkaufsstart und die angesagtesten Events der Stunde.
+      - link "Help Center" [ref=e2057] [cursor=pointer]:
+        - /url: https://www.eventim.de/faq/
+        - img "Help Center" [ref=e2059]
+    - button "Nach oben" [ref=e2062] [cursor=pointer]:
+      - generic [ref=e2063]: 
+      - text: Nach oben
+    - contentinfo [ref=e2064]:
+      - img
+      - generic [ref=e2065]:
+        - text:      
+        - generic [ref=e2066]:
+          - list [ref=e2067]:
+            - listitem [ref=e2068]:
+              - generic [ref=e2071]: EVENTIM
+            - listitem [ref=e2072]:
+              - list [ref=e2073]:
+                - listitem [ref=e2074]:
+                  - link "EVENTIM International" [ref=e2075] [cursor=pointer]:
+                    - /url: /campaign/international/
+                - listitem [ref=e2076]:
+                  - link "AGB" [ref=e2077] [cursor=pointer]:
+                    - /url: /help/terms/
+                - listitem [ref=e2078]:
+                  - link "Datenschutz" [ref=e2079] [cursor=pointer]:
+                    - /url: /help/data-protection/
+                - listitem [ref=e2080]:
+                  - link "Cookie-Einstellungen" [ref=e2081] [cursor=pointer]:
+                    - /url: "#cmpbox"
+                - listitem [ref=e2082]:
+                  - link "Barrierefreiheit" [ref=e2083] [cursor=pointer]:
+                    - /url: https://www.eventim.de/obj/media/DE-eventim/pdf/barrierefreiheiterklaerung-eve-de.pdf
+                - listitem [ref=e2084]:
+                  - link "Impressum" [ref=e2085] [cursor=pointer]:
+                    - /url: /help/imprint/
+                - listitem [ref=e2086]:
+                  - link "Widerruf" [ref=e2087] [cursor=pointer]:
+                    - /url: /help/cancellation/
+          - list [ref=e2088]:
+            - listitem [ref=e2089]:
+              - generic [ref=e2092]: Das Unternehmen
+            - listitem [ref=e2093]:
+              - list [ref=e2094]:
+                - listitem [ref=e2095]:
+                  - link "Corporate Website" [ref=e2096] [cursor=pointer]:
+                    - /url: https://corporate.eventim.de/
+                - listitem [ref=e2097]:
+                  - link "Jobs & Karriere" [ref=e2098] [cursor=pointer]:
+                    - /url: https://karriere.eventim.de/
+          - list [ref=e2099]:
+            - listitem [ref=e2100]:
+              - generic [ref=e2103]: B2B
+            - listitem [ref=e2104]:
+              - list [ref=e2105]:
+                - listitem [ref=e2106]:
+                  - link "Kontakt" [ref=e2107] [cursor=pointer]:
+                    - /url: https://www.eventim.de/campaign/veranstalter/ticketingsysteme/kontakt/
+                - listitem [ref=e2108]:
+                  - link "Veranstalter" [ref=e2109] [cursor=pointer]:
+                    - /url: https://www.eventim.de/campaign/veranstalter/ticketingsysteme/
+                - listitem [ref=e2110]:
+                  - link "Vorverkaufspartner" [ref=e2111] [cursor=pointer]:
+                    - /url: https://www.eventim-business.de/nextgen/ticketing/
+                - listitem [ref=e2112]:
+                  - link "Media & Sponsoring" [ref=e2113] [cursor=pointer]:
+                    - /url: https://eventim-brand-connect.com//
+                - listitem [ref=e2114]:
+                  - link "Affiliate Partner" [ref=e2115] [cursor=pointer]:
+                    - /url: https://www.eventim.de/campaign/eventim-partner/
+          - list [ref=e2116]:
+            - listitem [ref=e2117]:
+              - generic [ref=e2120]: Hilfe & Service
+            - listitem [ref=e2121]:
+              - list [ref=e2122]:
+                - listitem [ref=e2123]:
+                  - link "Help Center / FAQ" [ref=e2124] [cursor=pointer]:
+                    - /url: /helpcenter/
+                - listitem [ref=e2125]:
+                  - link "EVENTIM-News" [ref=e2126] [cursor=pointer]:
+                    - /url: /campaign/eventim-news/
+                - listitem [ref=e2127]:
+                  - link "Vorverkaufsstellen" [ref=e2128] [cursor=pointer]:
+                    - /url: /help/outlets/
+                - listitem [ref=e2129]:
+                  - link "EVENTIM-Gutschein" [ref=e2130] [cursor=pointer]:
+                    - /url: /campaign/gutschein/
+                - listitem [ref=e2131]:
+                  - link "Absagen & Verlegungen" [ref=e2132] [cursor=pointer]:
+                    - /url: /help/updates/
+                - listitem [ref=e2133]:
+                  - link "Gruppenbuchungen" [ref=e2134] [cursor=pointer]:
+                    - /url: /campaign/eventim-groupBooking/
+                - listitem [ref=e2135]:
+                  - link "Meldung nach Art. 16 DSA" [ref=e2136] [cursor=pointer]:
+                    - /url: https://www.eventim.de/campaign/dsa-report/
+          - list [ref=e2137]:
+            - listitem [ref=e2138]:
+              - generic [ref=e2141]: Mehr EVENTIM
+            - listitem [ref=e2142]:
+              - list [ref=e2143]:
+                - listitem [ref=e2144]:
+                  - link "EVENTIM.App" [ref=e2145] [cursor=pointer]:
+                    - /url: /campaign/eventim-app/
+                - listitem [ref=e2146]:
+                  - link "EVENTIM.Pass" [ref=e2147] [cursor=pointer]:
+                    - /url: /campaign/pass/
+                - listitem [ref=e2148]:
+                  - link "EVENTIM Headliner" [ref=e2149] [cursor=pointer]:
+                    - /url: /magazin/
+                - listitem [ref=e2150]:
+                  - link "eventimcard" [ref=e2151] [cursor=pointer]:
+                    - /url: /campaign/eventimcard/
+                - listitem [ref=e2152]:
+                  - link "fanSALE" [ref=e2153] [cursor=pointer]:
+                    - /url: https://www.fansale.de/fansale/
+                - listitem [ref=e2154]:
+                  - link "EVENTIM.Travel" [ref=e2155] [cursor=pointer]:
+                    - /url: https://www.eventim-travel.de/?utm_source=eventim&utm_medium=dp&utm_campaign=homepage&utm_content=footer
+                - listitem [ref=e2156]:
+                  - link "Waldbühne Berlin" [ref=e2157] [cursor=pointer]:
+                    - /url: https://www.waldbuehne-berlin.de/
+          - list [ref=e2158]:
+            - listitem [ref=e2159]:
+              - generic [ref=e2162]: Musicals
+            - listitem [ref=e2163]:
+              - list [ref=e2164]:
+                - listitem [ref=e2165]:
+                  - link "Musical- & Show-Highlights" [ref=e2166] [cursor=pointer]:
+                    - /url: https://www.eventim.de/campaign/aktuelle-musicals/
+                - listitem [ref=e2167]:
+                  - link "Disneys DER KÖNIG DER LÖWEN" [ref=e2168] [cursor=pointer]:
+                    - /url: https://www.eventim.de/campaign/musicals/disneys-der-koenig-der-loewen/
+                - listitem [ref=e2169]:
+                  - link "Disneys DIE EISKÖNIGIN - Das Musical" [ref=e2170] [cursor=pointer]:
+                    - /url: https://www.eventim.de/campaign/musicals/disneys-die-eiskoenigin/
+                - listitem [ref=e2171]:
+                  - link "Disneys Musical TARZAN" [ref=e2172] [cursor=pointer]:
+                    - /url: https://www.eventim.de/campaign/musicals/disneys-musical-tarzan/
+                - listitem [ref=e2173]:
+                  - link "MJ – Das Michael Jackson Musical" [ref=e2174] [cursor=pointer]:
+                    - /url: https://www.eventim.de/campaign/musicals/michael-jackson/
+                - listitem [ref=e2175]:
+                  - link "Zurück in die Zukunft - Das Musical" [ref=e2176] [cursor=pointer]:
+                    - /url: https://www.eventim.de/campaign/zurueck-in-die-zukunft-das-musical/
+      - generic [ref=e2179]:
+        - list [ref=e2180]:
+          - listitem [ref=e2181]:
+            - generic [ref=e2183]: Social Links
+          - listitem [ref=e2184]:
+            - list [ref=e2185]:
+              - listitem [ref=e2186]:
+                - link [ref=e2187] [cursor=pointer]:
+                  - /url: https://www.facebook.com/eventimDE
+                  - generic [ref=e2188]: 
+              - listitem [ref=e2189]:
+                - link [ref=e2190] [cursor=pointer]:
+                  - /url: https://www.instagram.com/eventimgermany/
+                  - generic [ref=e2191]: 
+              - listitem [ref=e2192]:
+                - link [ref=e2193] [cursor=pointer]:
+                  - /url: https://www.tiktok.com/@eventimgermany
+                  - generic [ref=e2194]: 
+        - list [ref=e2195]:
+          - listitem [ref=e2196]:
+            - generic [ref=e2198]: App Download
+          - listitem [ref=e2199]:
+            - list [ref=e2200]:
+              - listitem [ref=e2201]:
+                - link "App Store" [ref=e2202] [cursor=pointer]:
+                  - /url: https://apps.apple.com/de/app/eventim-de/id408601891
+                  - img "App Store" [ref=e2203]
+              - listitem [ref=e2204]:
+                - link "Google Play" [ref=e2205] [cursor=pointer]:
+                  - /url: https://play.google.com/store/apps/details?id=de.eventim.mobile.app.Android&hl=en
+                  - img "Google Play" [ref=e2206]
+        - list [ref=e2207]:
+          - listitem [ref=e2208]:
+            - generic [ref=e2210]: Bestell-Hotline Mo-Sa von 09:00 Uhr bis 18:00 Uhr
+          - listitem [ref=e2211]:
+            - list [ref=e2212]:
+              - listitem [ref=e2213]:
+                - link "01806-570070" [ref=e2214] [cursor=pointer]:
+                  - /url: tel:01806-570070
+                - paragraph [ref=e2215]: (0,20 €/Anruf inkl. MwSt aus allen dt. Netzen)
+      - generic [ref=e2218]:
+        - list [ref=e2219]:
+          - listitem [ref=e2220]:
+            - img "Eventim Logo" [ref=e2221]
+        - link "Anmelden" [ref=e2223] [cursor=pointer]:
+          - /url: /dashboard/
+        - generic [ref=e2224] [cursor=pointer]: "|"
+        - button "Sprach- und Länderauswahl Deutschland Deutsch" [ref=e2225]:
+          - generic "Deutschland" [ref=e2226] [cursor=pointer]:
+            - img [ref=e2227]
+          - generic "Deutsch" [ref=e2229] [cursor=pointer]: DE
+  - button "Cookie-Einstellungen" [ref=e2231] [cursor=pointer]:
+    - img "Cookie-Einstellungen" [ref=e2232]
+```
+
+# Test source
+
+```ts
+  1  | import { Page } from '@playwright/test';
+  2  | import { Selectors } from '../core/selectors';
+  3  | 
+  4  | export class HomePage {
+  5  |   constructor(private page: Page) {}
+  6  | 
+  7  |   async navigate(): Promise<void> {
+  8  |     await this.page.goto('/');
+  9  |     await this.acceptCookiesIfVisible();
+  10 |   }
+  11 | 
+  12 |   async acceptCookiesIfVisible(): Promise<void> {
+  13 |     const banner = this.page.locator(Selectors.home.cookieBanner);
+  14 |     if (await banner.isVisible({ timeout: 3000 }).catch(() => false)) {
+  15 |       await this.page.click(Selectors.home.acceptCookies);
+  16 |     }
+  17 |   }
+  18 | 
+  19 |   async searchEvent(eventName: string): Promise<void> {
+> 20 |     await this.page.fill(Selectors.home.searchInput, eventName);
+     |                     ^ TimeoutError: page.fill: Timeout 10000ms exceeded.
+  21 |     await this.page.click(Selectors.home.searchButton);
+  22 |     await this.page.waitForLoadState('networkidle');
+  23 |   }
+  24 | 
+  25 |   async getFeaturedEvents() {
+  26 |     return this.page.locator(Selectors.event.eventCard);
+  27 |   }
+  28 | 
+  29 |   async isHeroVisible(): Promise<boolean> {
+  30 |     return this.page.locator(Selectors.home.heroSection).isVisible();
+  31 |   }
+  32 | }
+  33 | 
+```

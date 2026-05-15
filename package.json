@@ -9,11 +9,19 @@
     "test:e2e": "playwright test tests/e2e/",
     "test:api": "playwright test tests/api/",
     "test:headed": "playwright test --headed",
-    "report": "playwright show-report"
+    "report": "playwright show-report",
+    "report:pdf": "tsx utils/reportToPdf.ts",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report"
   },
   "devDependencies": {
+    "@faker-js/faker": "^10.4.0",
     "@playwright/test": "^1.43.0",
     "@types/node": "^20.0.0",
+    "allure-commandline": "^2.41.0",
+    "allure-playwright": "^3.8.0",
+    "dotenv": "^17.4.2",
+    "tsx": "^4.22.0",
     "typescript": "^5.4.0"
   }
 }

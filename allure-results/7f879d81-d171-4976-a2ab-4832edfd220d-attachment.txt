@@ -1,0 +1,2 @@
+[2026-05-15T13:33:52.719Z] [INFO] Starting test: User can search for an event by name
+[METRIC] User can search for an event by name took 530ms

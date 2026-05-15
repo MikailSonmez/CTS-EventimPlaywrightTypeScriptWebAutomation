@@ -1,0 +1,1 @@
+[2026-05-15T13:38:11.181Z] [ERROR] Test FAILED: Empty search shows no results message

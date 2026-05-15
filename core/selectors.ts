@@ -7,6 +7,9 @@ export const Selectors = {
     navMenu: '[data-testid="nav-menu"]',
     cookieBanner: '[data-testid="cookie-banner"]',
     acceptCookies: '[data-testid="accept-cookies"]',
+    newsletterInput: '[data-testid="newsletter-input"]',
+    newsletterSubmit: '[data-testid="newsletter-submit"]',
+    footer: '[data-testid="footer"]'
   },
   event: {
     eventCard: '[data-testid="event-card"]',
@@ -17,6 +20,12 @@ export const Selectors = {
     buyTicketButton: '[data-testid="buy-ticket-btn"]',
     categoryFilter: '[data-testid="category-filter"]',
     sortDropdown: '[data-testid="sort-dropdown"]',
+    noResultsMessage: '[data-testid="no-results-message"]',
+    priceRangeMin: '[data-testid="price-min"]',
+    priceRangeMax: '[data-testid="price-max"]',
+    applyFiltersBtn: '[data-testid="apply-filters-btn"]',
+    eventDetailsText: '[data-testid="event-details-text"]',
+    venueInfo: '[data-testid="venue-info"]',
   },
   checkout: {
     seatSelector: '[data-testid="seat-selector"]',
@@ -30,6 +39,9 @@ export const Selectors = {
     cardCvc: '[data-testid="card-cvc"]',
     confirmButton: '[data-testid="confirm-order-btn"]',
     successMessage: '[data-testid="booking-success"]',
+    promoCodeInput: '[data-testid="promo-code-input"]',
+    applyPromoBtn: '[data-testid="apply-promo-btn"]',
+    discountAmount: '[data-testid="discount-amount"]',
   },
   auth: {
     loginButton: '[data-testid="login-btn"]',
@@ -38,10 +50,38 @@ export const Selectors = {
     submitLogin: '[data-testid="submit-login"]',
     logoutButton: '[data-testid="logout-btn"]',
     userMenu: '[data-testid="user-menu"]',
+    registerLink: '[data-testid="register-link"]',
+    registerEmail: '[data-testid="register-email"]',
+    registerPassword: '[data-testid="register-password"]',
+    registerConfirm: '[data-testid="register-confirm"]',
+    submitRegister: '[data-testid="submit-register"]',
+    errorMessage: '[data-testid="auth-error-msg"]'
   },
   header: {
     logo: '[data-testid="header-logo"]',
     cartIcon: '[data-testid="cart-icon"]',
     cartCount: '[data-testid="cart-count"]',
+    languageSelector: '[data-testid="language-selector"]',
+    currencySelector: '[data-testid="currency-selector"]'
   },
+  cart: {
+    cartItem: '[data-testid="cart-item"]',
+    cartItemTitle: '[data-testid="cart-item-title"]',
+    cartItemPrice: '[data-testid="cart-item-price"]',
+    removeBtn: '[data-testid="remove-item-btn"]',
+    quantityInput: '[data-testid="quantity-input"]',
+    emptyCartMessage: '[data-testid="empty-cart-message"]',
+    checkoutBtn: '[data-testid="cart-checkout-btn"]'
+  },
+  profile: {
+    profileHeader: '[data-testid="profile-header"]',
+    orderHistory: '[data-testid="order-history-list"]',
+    orderItem: '[data-testid="order-history-item"]',
+    personalInfoForm: '[data-testid="personal-info-form"]',
+    saveProfileBtn: '[data-testid="save-profile-btn"]',
+    firstNameInput: '[data-testid="first-name-input"]',
+    lastNameInput: '[data-testid="last-name-input"]',
+    phoneInput: '[data-testid="phone-input"]',
+    successToast: '[data-testid="toast-success"]'
+  }
 };

@@ -1,0 +1,1 @@
+[2026-05-15T13:33:53.047Z] [ERROR] Test FAILED: Checkout requires authentication

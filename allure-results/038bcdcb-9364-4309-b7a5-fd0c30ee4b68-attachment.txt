@@ -1,0 +1,1 @@
+[2026-05-15T13:38:10.872Z] [ERROR] Test FAILED: User can search for an event by name

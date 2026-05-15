@@ -1,0 +1,74 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: api\event.api.spec.ts >> Event API Tests >> GET /events/:id returns specific event details
+- Location: tests\api\event.api.spec.ts:17:7
+
+# Error details
+
+```
+Error: apiRequestContext.get: getaddrinfo ENOTFOUND api.example-eventim.com
+Call log:
+  - → GET https://api.example-eventim.com/v1/events/12345
+    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:148.0.2) Gecko/20100101 Firefox/148.0.2
+    - accept: */*
+    - accept-encoding: gzip,deflate,br
+
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | import { EventDataBuilder } from '../../fixtures/testDataBuilder';
+  3  | 
+  4  | test.describe('Event API Tests', () => {
+  5  |   const baseURL = 'https://api.example-eventim.com/v1';
+  6  | 
+  7  |   test('GET /events returns list of events', async ({ request }) => {
+  8  |     // Mocking the request URL for demonstration
+  9  |     const response = await request.get(`${baseURL}/events`);
+  10 |     // Assuming the API might return 404 or something if not real, 
+  11 |     // but in a real project we assert 200
+  12 |     // expect(response.status()).toBe(200);
+  13 |     // const responseBody = await response.json();
+  14 |     // expect(Array.isArray(responseBody.events)).toBeTruthy();
+  15 |   });
+  16 | 
+  17 |   test('GET /events/:id returns specific event details', async ({ request }) => {
+  18 |     const eventId = '12345';
+> 19 |     const response = await request.get(`${baseURL}/events/${eventId}`);
+     |                                    ^ Error: apiRequestContext.get: getaddrinfo ENOTFOUND api.example-eventim.com
+  20 |     // expect(response.status()).toBe(200);
+  21 |   });
+  22 | 
+  23 |   test('GET /events with category filter', async ({ request }) => {
+  24 |     const response = await request.get(`${baseURL}/events`, {
+  25 |       params: {
+  26 |         category: 'Music'
+  27 |       }
+  28 |     });
+  29 |     // expect(response.status()).toBe(200);
+  30 |     // const body = await response.json();
+  31 |     // body.events.forEach(e => expect(e.category).toBe('Music'));
+  32 |   });
+  33 | 
+  34 |   test('POST /events creates a new event (Admin only)', async ({ request }) => {
+  35 |     const newEvent = new EventDataBuilder().withTitle('API Created Event').withCategory('Theater').build();
+  36 |     
+  37 |     const response = await request.post(`${baseURL}/admin/events`, {
+  38 |       data: newEvent,
+  39 |       headers: {
+  40 |         'Authorization': 'Bearer admin_token_here'
+  41 |       }
+  42 |     });
+  43 |     // expect(response.status()).toBe(201);
+  44 |   });
+  45 | });
+  46 | 
+```

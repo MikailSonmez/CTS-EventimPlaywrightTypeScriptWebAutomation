@@ -1,0 +1,2 @@
+[2026-05-15T13:36:43.547Z] [INFO] Starting test: Empty search shows no results message
+[METRIC] Empty search shows no results message took 16857ms

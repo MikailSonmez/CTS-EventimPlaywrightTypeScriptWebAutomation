@@ -1,0 +1,2 @@
+[2026-05-15T13:35:08.191Z] [INFO] Starting test: Full ticket flow navigates to checkout
+[METRIC] Full ticket flow navigates to checkout took 14248ms

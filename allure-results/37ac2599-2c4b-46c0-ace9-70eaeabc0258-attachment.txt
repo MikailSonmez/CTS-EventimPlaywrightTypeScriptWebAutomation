@@ -1,0 +1,1 @@
+[2026-05-15T13:34:02.178Z] [INFO] Creating booking for eventId=evt-001, userId=user-001

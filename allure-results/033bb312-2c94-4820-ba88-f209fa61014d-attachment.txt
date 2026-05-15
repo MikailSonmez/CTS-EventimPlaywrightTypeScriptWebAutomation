@@ -1,0 +1,1 @@
+[2026-05-15T13:38:11.894Z] [ERROR] Test FAILED: Homepage loads with hero section

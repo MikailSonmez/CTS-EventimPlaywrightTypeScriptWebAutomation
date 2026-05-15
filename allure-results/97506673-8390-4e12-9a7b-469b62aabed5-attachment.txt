@@ -1,0 +1,1 @@
+[2026-05-15T13:37:26.773Z] [ERROR] Test FAILED: Full ticket flow navigates to checkout

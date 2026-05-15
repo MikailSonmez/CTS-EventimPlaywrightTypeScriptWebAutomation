@@ -1,0 +1,1 @@
+[2026-05-15T13:33:50.509Z] [ERROR] Test FAILED: Order summary shows correct price

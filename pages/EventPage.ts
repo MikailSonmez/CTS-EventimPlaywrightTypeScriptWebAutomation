@@ -43,4 +43,14 @@ export class EventPage {
     await this.page.selectOption(Selectors.event.sortDropdown, option);
     await this.page.waitForLoadState('networkidle');
   }
+
+  async selectTicketCategory(category: string): Promise<void> {
+    // Assuming there's a category selection dropdown or radio buttons for ticket type
+    // This is a placeholder since we don't have a specific selector yet, we can reuse categoryFilter
+    // or create a new selector. Let's assume we have a ticketType selector.
+    const ticketSelector = this.page.locator(`[data-testid="ticket-category-${category.toLowerCase()}"]`);
+    if (await ticketSelector.isVisible()) {
+      await ticketSelector.click();
+    }
+  }
 }

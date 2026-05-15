@@ -1,0 +1,2 @@
+[2026-05-15T13:33:48.810Z] [INFO] Starting test: Order summary shows correct price
+[METRIC] Order summary shows correct price took 829ms

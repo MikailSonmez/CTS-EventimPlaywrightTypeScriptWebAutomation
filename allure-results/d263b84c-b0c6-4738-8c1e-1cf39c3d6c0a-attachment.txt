@@ -1,0 +1,2 @@
+[2026-05-15T13:34:53.418Z] [INFO] Starting test: Homepage loads with hero section
+[METRIC] Homepage loads with hero section took 10006ms
